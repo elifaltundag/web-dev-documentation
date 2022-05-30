@@ -145,7 +145,7 @@ html {
     width: 20ch;
     margin-top: 0.5em;
     margin-right: 1em;
-    font-size: clamp(0.9rem, 0.4rem + 0.7vw, 1.2rem);
+    font-size: clamp(0.9rem, 0.4rem + 0.7vw, 1.1rem);
 }
 
 
@@ -167,12 +167,12 @@ h1 {
 }
 
 p, ul, ol, li {
-    font-size: clamp(1rem, 0.5rem + 0.8vw, 1.2rem);
+    font-size: clamp(0.98rem, 0.5rem + 0.8vw, 1.15rem);
 }
 
 code {
     font-family: var(--ff-mnsp);
-    font-size: clamp(0.9rem, 0.4rem + 0.7vw, 1.2rem);
+    font-size: clamp(0.9rem, 0.4rem + 0.6vw, 1.05rem);
 }
 
 abbr {
