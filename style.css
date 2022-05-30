@@ -281,9 +281,9 @@ a:link {
     color: hsl(var(--clr-base));
 }
 
-a:visited {
+/* a:visited {
     color: hsl(var(--clr-base-dark));
-}
+} */
 
 a:hover {
     border-bottom: 1px solid hsl(var(--clr-base));
