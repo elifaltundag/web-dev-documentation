@@ -399,13 +399,13 @@ a:active {
         width: min(40ch, 30vw);
         grid-area: navbar;
         border-right: 1px solid hsla(var(--clr-base), 0.7);
-        padding-right: 1.5em;
         position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
-        padding-left: 1.5em;
-        overflow-y: scroll;
+        padding: 0 1.5em;
+        overflow-y: hidden;
+        overflow-y: auto;
     }
 
     main {
