@@ -112,6 +112,10 @@ html {
     margin: 0.4em 0 0.1em;
 }
 
+.main-section {
+    margin-top: 1em;
+}
+
 .section-contents {
     display: flex;
     flex-direction: column;
@@ -207,7 +211,7 @@ body {
         "navbar" 
         "content"
         "footer";
-    row-gap: 1.5em;
+    row-gap: 1.3rem;
     position: relative;
 }
 
@@ -304,13 +308,14 @@ a:active {
     /** Main grid */
     body {
         display: grid;  
-        grid-template-columns: minmax(20%, 30%) auto;      
+        grid-template-columns: 40ch auto;      
         grid-template-areas: 
             "navbar content"
             "footer footer";
         row-gap: 1.5em;
-
+        column-gap: 2em;
         padding: min(2em, 5%);
+
     }
 
     #navbar {
