@@ -39,7 +39,6 @@
                     <li><a href="#">Set custom properties</a></li>
                     <li><a href="#">Setup the body</a></li>
                     <li><a href="#">Disable animations</a></li>
-                    <li><a href="#">For screen reader only</a></li>
                 </ul>
             </li>
             
@@ -288,15 +287,6 @@
     <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-gray-light</span>));
 }</code></pre>
                         </li>
-                        
-                        <li class="list-item">
-                            <pre class="code-snippet">
-<code><span class="cd-tag">body</span> { 
-    <span class="cd-prop">line-height</span>: <span class="cd-number">1.6</span>;
-    <span class="cd-prop">min-height</span>: <span class="cd-number">100vh</span>;
-    <span class="cd-prop">padding</span>: min(<span class="cd-number">1em</span>, <span class="cd-number">3%</span>);
-}</code></pre>
-                        </li>
                     </ul>
                 </li>
 
@@ -312,31 +302,14 @@
     }
     
     <span class="cd-tag">*, *::before, *::after</span> {
-        <span class="cd-prop">animation-duration</span>: <span class="cd-number">0.01ms</span> !important;
-        <span class="cd-prop">animation-iteration-count</span>: <span class="cd-number">1</span> !important;
-        <span class="cd-prop">transition-duration</span>: <span class="cd-number">0.01ms</span> !important;
-        <span class="cd-prop">scroll-behavior</span>: <span class="cd-prop">auto</span> !important;
+        <span class="cd-prop">animation-duration</span>: <span class="cd-number">0.01ms</span> <span class="cd-important">!important</span>;
+        <span class="cd-prop">animation-iteration-count</span>: <span class="cd-number">1</span> <span class="cd-important">!important</span>;
+        <span class="cd-prop">transition-duration</span>: <span class="cd-number">0.01ms</span> <span class="cd-important">!important</span>;
+        <span class="cd-prop">scroll-behavior</span>: <span class="cd-prop">auto</span> <span class="cd-important">!important</span>;
     }
 }</code></pre>
                 </li>
 
-                <li>
-                    <h3>For screen readers only</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quos ab expedita at perspiciatis rerum corrupti temporibus iusto fugiat nihil quibusdam fuga molestias sunt, ipsam ratione molestiae error incidunt similique.</p>
-                    <pre class="code-snippet">
-<code><span class="cd-comment">/* A11Y - screen reader only: only for assistive technologies which read the page out loud */</span>
-<span class="cd-tag">.sr-only</span> {
-    <span class="cd-prop">position</span>: <span class="cd-prop">absolute</span>;
-    <span class="cd-prop">width</span>: <span class="cd-number">1px</span>;
-    <span class="cd-prop">height</span>: <span class="cd-number">1px</span>;
-    <span class="cd-prop">padding</span>: <span class="cd-number">0</span>;
-    <span class="cd-prop">margin</span>: <span class="cd-number">-1</span>;
-    <span class="cd-prop">overflow</span>: <span class="cd-prop">hidden</span>;
-    <span class="cd-prop">clip</span>: <span class="cd-prop">rect</span>(<span class="cd-number">0</span>, <span class="cd-number">0</span>, <span class="cd-number">0</span>, <span class="cd-number">0</span>);
-    <span class="cd-prop">white-space</span>: <span class="cd-prop">nowrap</span>;
-    <span class="cd-prop">border</span>: <span class="cd-number">0</span>;
-}</code></pre>
-                </li>
             </ul>
         </section>
 
@@ -350,12 +323,63 @@
                     <ul>&lpar; &ast; &rpar; There are a few situations in which absolute units don&apos;t interfere with your design intentions and actually improves consistency &colon;
                         <li class="list-item">Media queries work best with absolute units.</li>
                         <li class="list-item">Using px for borders, outlines and some lines created with pseudo-elements makes sure that you have the same thickness &lpar;width, height, weight&rpar; no matter the size. If you prefer, you can adjust this by adding 1-2 more media queries &lpar;for mobile, tablet &amp; laptop, large screens&rpar; with different thickness values.</li>
+                        <li class="list-item">Using relative units when using shadows and filters like blur can result in inconsistency.</li>
                     </ul>
                 </li>
 
 
                 <li>
                     <h3>Where to use which unit</h3>
+                    <!-- <ul>
+                        <li class="list-item">Font sizes</li>
+                        <li class="list-item">Margins &amp; paddings</li>
+                        <li class="list-item">Width &amp; height</li>
+                        <li class="list-item">Media queries</li>
+                    </ul> -->
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Property</td>
+                                <td>Units</td>
+                                <td>Details</td>
+                            </tr>
+                        </thead>
+                        
+                        
+                        <tbody>
+                            <tr>
+                                <td rowspan="2"><code>font-size</code></td>
+                                <td><code>rem</code></td>
+                                <td>Rem unit is ideal for adjusting font sizes. They can be combined with viewport width &lpar;<code>vw</code>&rpar; or viewport height &lpar;<code>vh</code>&rpar; units and the <code>clamp()</code> function to create responsive font sizes.</td>
+                            </tr>
+                            <tr>
+                                <td><code>vw, vh</code></td>
+                                <td>1vw &equals; 1&percnt; of the viewport width, 1vh &equals; 1&percnt; of the viewport height. They enable fonts to shrink and expand based on the width or height of the device screen.</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><code>margin, padding</code></td>
+                                <td><code>em, ch</code></td>
+                                <td>When creating interactive elements such as buttons, using em and ch units can help the size and whitespace adjust to the text content contained, which creates consistency through all elements of the same type.</td>
+                            </tr>
+                            <tr>
+                                <td><code>rem</code></td>
+                                <td>If whitespace is arranged with margins and paddings, em units can cause them to be too small or too big. Using rem will make sure to always refer back to the root element&apos;s font size &lpar;usually <code>&lt;html&gt;&rpar;.</code></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><code>width, height</code>
+                                <span class="table-prop-exp">Setting direct width and especially height is usually dangerous unless you&apos;re definitely sure you know what you&apos;re doing. Try using <code>min-height</code> instead of <code>height</code> whenever possible. Combine <code>width</code> with <code>min()</code> and <code>max()</code> functions.</span></td>
+                                <td><code>ch</code></td>
+                                <td>When setting up the width of text elements the ch unit is a life-saver. By adjusting the font-size with rems and vws and setting the width with ch, you ensure there is no text overflow in the x-direction. This can be especially helpful when building tables and forms.</td>
+                                    
+                            </tr>
+                            <tr>
+                                <td><code>&percnt;</code></td>
+                                <td>The same property of the parent element is multiplied with the percentage. When combined with grid and flexbox, percentages can help developers create fluid layouts.</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </li>
             </ul>
         </section>

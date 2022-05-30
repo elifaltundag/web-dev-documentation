@@ -100,10 +100,16 @@ html {
     border: 0;
 } 
 
+.nav-list {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+
 .nav-link {
     font-size: clamp(1.15rem, 2%, 1.2rem);
     display: inline-block;
-    margin: 0.3em 0;
+    margin: 0.4em 0 0.1em;
 }
 
 .section-contents {
@@ -115,6 +121,7 @@ html {
 .list-item {
     list-style-type: circle;
     list-style-position: inside;
+    margin-top: 0.1em;
 }
 
 .code-snippet {
@@ -131,6 +138,15 @@ html {
 .cd-text { color: var(--cd-orange);}
 .cd-tag { color: var(--cd-green);}
 .cd-number { color: var(--cd-red);}
+
+.table-prop-exp {
+    display: block;
+    width: 20ch;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    font-size: clamp(0.9rem, 0.4rem + 0.7vw, 1.2rem);
+}
+
 
 
 /*! -------------------- */
@@ -171,12 +187,9 @@ p, ul {
     margin-top: 1em;
 }
 
-.nav-list {
-    margin-top: 0;
-    margin-bottom: 1em;
-    padding-left: 1em;
+thead {
+    color: hsl(var(--clr-base));
 }
-
 
 /*! -------------------- */
 /*! DISPLAY              */
@@ -294,8 +307,6 @@ a:active {
 
         padding: min(2em, 5%);
     }
-
-   
 
     #navbar {
         grid-area: navbar;
