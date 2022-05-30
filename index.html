@@ -14,11 +14,14 @@
     
     <!-- CSS --> 
     <link href="style.css" rel="stylesheet" type="text/css">   
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <div id="mobile-nav-menu">
-        <button class="btn-nav-toggle" aria-controls="navbar" aria-expanded="false">
+        <button id="btn-hamburger" class="btn-nav-toggle" aria-controls="navbar" aria-expanded="false">
             <span class="sr-only">Menu</span>
             <div id="hamburger-1" class="hamburger"></div>
             <div id="hamburger-2" class="hamburger"></div>
@@ -26,7 +29,7 @@
         </button>
     </div>
     
-    <nav id="navbar">        
+    <nav id="navbar" menu-visible="false">        
         <header>
             <p id="description"></p></header>
         <ul id="navigation">

@@ -47,6 +47,7 @@ body {
     min-height: 100vh;    
     font-family: var(--ff-sans-serif);
     overflow-x: hidden;
+    overflow-y: auto;
 
     background-color: hsl(var(--clr-gray-dark));
     color: hsl(var(--clr-gray-light));
@@ -272,7 +273,18 @@ td {
 /*! -------------------- */
 #navbar {
     position: fixed;
-    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(var(--clr-gray-dark));
+    transform: translateY(-120%);
+    width: 100%;
+    padding-left: 1em;
+    z-index: 1;
+}
+
+#navbar[menu-visible="true"] {
+    transform: translateY(0);
 }
 
 #mobile-nav-menu {
@@ -284,7 +296,7 @@ td {
     width: 100%;
     height: 5ch;
     background-color: hsl(var(--clr-gray-dark));
-    z-index: 2;
+    z-index: 500;
     padding: 0 2ch;
 
     border-bottom: 2px solid hsla(var(--clr-base), 0.7);
@@ -303,6 +315,7 @@ td {
     display: flex;
     flex-direction: column;
     row-gap: 6px;
+    z-index: 500;
 }
 
 .hamburger {
@@ -317,29 +330,6 @@ td {
     position: relative;
 }
 
-/* #hamburger::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    border-radius: 1ch;
-    background-color: hsl(var(--clr-base));
-    left: 0;
-    top: -8px;
-
-}
-
-#hamburger::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    border-radius: 1ch;
-    background-color: hsl(var(--clr-base));
-    left: 0;
-    bottom: -8px;
-
-} */
 
 /*! -------------------- */
 /*! SECTIONAL ELEMENTS   */
