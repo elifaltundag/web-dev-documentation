@@ -320,7 +320,7 @@
                 <li>
                     <h3>Why to avoid&ast; absolute units</h3>
                     <p>Absolute units are great during the learning process; but when it comes down to putting the knowledge into practice, they fail us developers at resposiveness. Absolute units might cause adding more than necessary media queries in order to provide smooth transitions through all screen sizes. At first it can feel strange to work with relative units and you don&apos;t feel like you know what you&apos;re doing, but after a short adaptation period, resposiveness becomes so much easier to deal with.</p>
-                    <ul>&lpar; &ast; &rpar; There are a few situations in which absolute units don&apos;t interfere with your design intentions and actually improves consistency &colon;
+                    <ul><span class="attn">&lpar; &ast; &rpar; There are a few situations in which absolute units don&apos;t interfere with your design intentions and actually improve consistency &colon;</span>
                         <li class="list-item">Media queries work best with absolute units.</li>
                         <li class="list-item">Using px for borders, outlines and some lines created with pseudo-elements makes sure that you have the same thickness &lpar;width, height, weight&rpar; no matter the size. If you prefer, you can adjust this by adding 1-2 more media queries &lpar;for mobile, tablet &amp; laptop, large screens&rpar; with different thickness values.</li>
                         <li class="list-item">Using relative units when using shadows and filters like blur can result in inconsistency.</li>
@@ -367,7 +367,7 @@
                                 <td>If whitespace is arranged with margins and paddings, em units can cause them to be too small or too big. Using rem will make sure to always refer back to the root element&apos;s font size &lpar;usually <code>&lt;html&gt;&rpar;.</code></td>
                             </tr>
                             <tr>
-                                <td rowspan="2"><code>width, height</code>
+                                <td rowspan="3"><code>width, height</code>
                                 <span class="table-prop-exp">Setting direct width and especially height is usually dangerous unless you&apos;re definitely sure you know what you&apos;re doing. Try using <code>min-height</code> instead of <code>height</code> whenever possible. Combine <code>width</code> with <code>min()</code> and <code>max()</code> functions.</span></td>
                                 <td><code>ch</code></td>
                                 <td>When setting up the width of text elements the ch unit is a life-saver. By adjusting the font-size with rems and vws and setting the width with ch, you ensure there is no text overflow in the x-direction. This can be especially helpful when building tables and forms.</td>
@@ -376,6 +376,10 @@
                             <tr>
                                 <td><code>&percnt;</code></td>
                                 <td>The same property of the parent element is multiplied with the percentage. When combined with grid and flexbox, percentages can help developers create fluid layouts.</td>
+                            </tr>
+                            <tr>
+                                <td><code>vw, vh</code></td>
+                                <td>If the desired outcome is to have the elements size remain proportional to the screen size, viewport width and viewport height can be used.</td>
                             </tr>
                             
                         </tbody>
