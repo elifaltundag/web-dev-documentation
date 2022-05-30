@@ -251,6 +251,10 @@ thead, tr {
     border-bottom: 1px solid hsla(var(--clr-base), 0.3);
 }
 
+.table-last-row {
+    border-bottom: none;
+}
+
 td {
     padding: 0.5em 0.4em;
 }
