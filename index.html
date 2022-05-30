@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document Title</title>
+    <title>Web Development Documentation</title>
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +16,19 @@
     <link href="style.css" rel="stylesheet" type="text/css">   
 </head>
 <body>
-    
 
-    <nav id="navbar">
-        
+    <div id="mobile-nav-menu">
+        <button class="btn-nav-toggle" aria-controls="navbar" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <div id="hamburger"></div>
+        </button>
+    </div>
+    
+    <nav id="navbar">        
         <header>
-            <h1>Technical Documentation for HTML &amp; CSS</h1>
+            <h1><a href="#">Technical Documentation for HTML &amp; CSS</a></h1>
             <p id="description">A brief guide to responsiveness, accessibility and interactivity in web design &amp; development</p></header>
-        <ul>
+        <ul id="navigation">
             <li>
                 <a href="#Semantic_HTML" class="nav-link">Semantic HTML</a>
                 <ul class="nav-list">
@@ -145,7 +150,7 @@
                             <tr>
                                 <td><code class="cd-tag-title">&lt;footer&gt;</code></td>
                                 <td><code>&lt;body&gt;</code></td>
-                                <td>Contains information about the author, copyright data, site&dash;map and related external links</td>
+                                <td>Contains information about the author, copyright data, site&ndash;map and related external links</td>
                             </tr>
                             <tr>
                                 <td><code class="cd-tag-title">&lt;nav&gt;</code></td>
@@ -204,7 +209,7 @@
                     <p>Defining custom properties, such as fonts, gaps, and colors at the top the CSS file in <code>&colon;&colon;root</code> can increase a developer&apos;s efficiency immensely.</p>
                     <ul>
                         <li class="list-item">
-                            Using 2-3 different font families create lisible pages. A key feature in combining a serif and a sans&dash;font tweaking the contrast &lpar;lankiness and plumpness&rpar; between them. Two font families from different types look well together when they are not too similar or too divergent.
+                            Using 2-3 different font families create lisible pages. A key feature in combining a serif and a sans&ndash;font tweaking the contrast &lpar;lankiness and plumpness&rpar; between them. Two font families from different types look well together when they are not too similar or too divergent.
                             <pre class="code-snippet">
 <code><span class="cd-tag">:root</span> {
     <span class="cd-comment">/* Fonts */</span>
@@ -261,7 +266,7 @@
 
 
                         <li class="list-item">
-                            The default <code>line&dash;height</code> is 1.4, which can make a page difficult to read where the content gets a little crowded. Setting the line-height to 1.5-1.7 increase lisiblity of long documents.
+                            The default <code>line&ndash;height</code> is 1.4, which can make a page difficult to read where the content gets a little crowded. Setting the line-height to 1.5-1.7 increase lisiblity of long documents.
                             <pre class="code-snippet">
 <code><span class="cd-tag">body</span> { 
     <span class="cd-prop">line-height</span>: <span class="cd-number">1.6</span>;
@@ -339,7 +344,7 @@
                         
                         <tbody>
                             <tr>
-                                <td rowspan="2"><code>font-size</code></td>
+                                <td rowspan="2"><code class="cd-prop">font-size</code></td>
                                 <td><code>rem</code></td>
                                 <td>Rem unit is ideal for adjusting font sizes. They can be combined with viewport width &lpar;<code>vw</code>&rpar; or viewport height &lpar;<code>vh</code>&rpar; units and the <code>clamp()</code> function to create responsive font sizes.</td>
                             </tr>
@@ -348,7 +353,7 @@
                                 <td>1vw &equals; 1&percnt; of the viewport width, 1vh &equals; 1&percnt; of the viewport height. They enable fonts to shrink and expand based on the width or height of the device screen.</td>
                             </tr>
                             <tr>
-                                <td rowspan="2"><code>margin, padding</code></td>
+                                <td rowspan="2"><code class="cd-prop">margin, padding</code></td>
                                 <td><code>em ch</code></td>
                                 <td>When creating interactive elements such as buttons, using em and ch units can help the size and whitespace adjust to the text content contained, which creates consistency through all elements of the same type.</td>
                             </tr>
@@ -357,7 +362,7 @@
                                 <td>If whitespace is arranged with margins and paddings, em units can cause them to be too small or too big. Using rem will make sure to always refer back to the root element&apos;s font size &lpar;usually <code>&lt;html&gt;&rpar;.</code></td>
                             </tr>
                             <tr>
-                                <td rowspan="3"><code>width, height</code>
+                                <td rowspan="3"><code class="cd-prop">width, height</code>
                                 <span class="table-prop-exp">Setting direct width and especially height is usually dangerous unless you&apos;re definitely sure you know what you&apos;re doing. Try using <code>min-height</code> instead of <code>height</code> whenever possible. Combine <code>width</code> with <code>min()</code> and <code>max()</code> functions.</span></td>
                                 <td><code>ch</code></td>
                                 <td>When setting up the width of text elements the ch unit is a life-saver. By adjusting the font-size with rems and vws and setting the width with ch, you ensure there is no text overflow in the x-direction. This can be especially helpful when building tables and forms.</td>
