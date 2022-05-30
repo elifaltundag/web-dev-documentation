@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document Title</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- CSS --> 
+    <link href="style.css" rel="stylesheet" type="text/css">   
+</head>
+<body>
+    
+
+    <nav id="navbar">
+        
+        <header>
+            <h1>Technical Documentation for HTML &amp; CSS</h1>
+            <p id="description">A brief guide to responsiveness, accessibility and interactivity in web design &amp; development</p></header>
+        <ul>
+            <li>
+                <a href="#Semantic_HTML" class="nav-link">Semantic HTML</a>
+                <ul class="nav-list">
+                    <li><a href="#">Why should they be used?</a></li>
+                    <li><a href="#">Some important semantic HTML tags</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#CSS_Template" class="nav-link">CSS Template</a>
+                <ul class="nav-list">
+                    <li><a href="#">Reset box model, margins &amp; paddings</a></li>
+                    <li><a href="#">Set custom properties</a></li>
+                    <li><a href="#">Setup the body</a></li>
+                    <li><a href="#">Disable animations</a></li>
+                    <li><a href="#">For screen reader only</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Responsive_Units" class="nav-link">Responsive Units</a>
+                <ul class="nav-list">
+                    <li><a href="#">Why avoid absolute units</a></li>
+                    <li><a href="#">Where to use which unit</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Flex_&_Grid" class="nav-link">Flex &amp; Grid</a>
+                <ul class="nav-list">
+                    <li><a href="#">Flex</a></li>
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Combining both</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#Pseudo_Classes_&_Elements" class="nav-link">Pseudo Classes & Elements</a>
+                <ul class="nav-list">
+                    <li><a href="#">Main purpose &amp; difference</a></li>
+                    <li><a href="#">Pseudo classes</a></li>
+                    <li><a href="#">Pseudo elements</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#Interactive_Webpages" class="nav-link">Interactive Webpages</a>
+                <ul class="nav-list">
+                    <li><a href="#">Link states</a></li>
+                    <li><a href="#">Button states</a></li>
+                    <li><a href="#">Giving feedback</a></li>
+                    <li><a href="#">Validation</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">        
+        <section class="main-section">
+            <header id="Semantic_HTML"><h2>Semantic HTML</h2></header>
+            <ul class="section-contents">
+                <li>
+                    <h3>Why should they be used?</h3>
+                    <p>For both users and developers, the semantic HTML tags are important when navigating a website.</p>
+                    <ul>The main advantages of using semantic HTML tags:
+                        <li class="list-item">Search engines will consider its content as important keywords which improves the page&apos;s <abbr title="Search Engine Optimization">SEO</abbr></li>
+                        <li class="list-item">Text to speach screen readers can use them as indicators to help visually impaired users navigate the page</li>
+                        <li class="list-item">Finding blocks of meaningful code is significantly easier than searching through endless <code>&lt;div&gt;</code>s with or without semantic tags</li>
+                        <li class="list-item">They suggest the developer the type of data that needs to be populated</li>
+                        <li class="list-item">Semantic naming mirrors proper custom element and component naming</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Some important HTML tags</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>HTML tag</td>
+                                <td>Parent</td>
+                                <td>Purpose</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;head&gt;</code></td>
+                                <td><code>&lt;html&gt;</code></td>
+                                <td>Contains machine-readable information &lpar;metadata&rpar; about the page</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;meta&gt;</code></td>
+                                <td><code>&lt;head&gt;</code></td>
+                                <td>Represents metadata that cannot be represented by other HTML meta-related elements</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;title&gt;</code></td>
+                                <td><code>&lt;head&gt;</code></td>
+                                <td>Displays the page title on the tabs section of the browser</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;link&gt;</code></td>
+                                <td><code>&lt;head&gt;</code></td>
+                                <td>Specifies relationship between the document and an external source.<br>Most commonly used with stylesheets and fonts.</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;body&gt;</code></td>
+                                <td><code>&lt;html&gt;</code></td>
+                                <td>Contains the content of the page</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;header&gt;</code></td>
+                                <td><code>&lt;body&gt;</code></td>
+                                <td>Contains navigation and introductory content</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;main&gt;</code></td>
+                                <td><code>&lt;body&gt;</code></td>
+                                <td>Contains the dominant content</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;footer&gt;</code></td>
+                                <td><code>&lt;body&gt;</code></td>
+                                <td>Contains information about the author, copyright data, site&dash;map and related external links</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;nav&gt;</code></td>
+                                <td><code>&lt;header&gt;</code></td>
+                                <td>Displays the general outline of the web and redirects to related sections</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;section&gt;</code></td>
+                                <td><code>&lt;main&gt;</code></td>
+                                <td>Represents a generic standalone section of the page. Without <code>aria-label</code> or <code>aria-labelledby</code> attributes, it doesn&apos;t serve semantic purposes</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;ol&gt;, &lt;ul&gt;</code></td>
+                                <td><code>&lt;section&gt;, &lt;div&gt;</code></td>
+                                <td>Ordered list, unordered list<br>List item</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;li&gt;</code></td>
+                                <td><code>&lt;ol&gt;, &lt;ul&gt;</code></td>
+                                <td>Ordered list, unordered list<br>List item</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;form&gt;</code></td>
+                                <td><code>&lt;section&gt;, &lt;div&gt;</code></td>
+                                <td>Contains interactive controls and input spaces for submitting information</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;button&gt;</code></td>
+                                <td><code>&lt;form&gt;, &lt;div&gt;</code></td>
+                                <td>Performs an action when activated by a mouse, keyboard, finger, voice command, or other assistive technology.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </section>
+
+        
+        <section class="main-section">
+            <header id="CSS_Template"><h2>CSS Template</h2></header>
+            <ul class="section-contents">
+                <li>
+                    <h3>Reset box-model, margins and paddings</h3>
+                    <p>HTML tags come with default properties. That is one of the reasons why they are so useful. However, when adjusting layouts and whitespaces, these properties can result in unwanted behavior. In order to avoid all the undesired outputs this situation brings, most developers reset their box-model, margins and padding at the very top of all their CSS files.</p>
+                    <pre class="code-snippet">
+<code><span class="cd-comment">/* Box sizing, reset margins &amp; paddings */</span>
+<span class="cd-tag">*, *::before, *::after</span> {
+    <span class="cd-prop">box-sizing</span>: <span class="cd-prop">border-box</span>;
+    <span class="cd-prop">margin</span>: <span class="cd-number">0</span>;
+    <span class="cd-prop">padding</span>: <span class="cd-number">0</span>;
+}</code></pre>
+                    <p>The universal selector &ast;, selects every element in the page. More on pseudo-elements &colon;&colon;before and &colon;&colon;after</p>
+                </li>
+
+                <li>
+                    <h3>Setup custom properties</h3>
+                    <p>Defining custom properties, such as fonts, gaps, and colors at the top the CSS file in <code>&colon;&colon;root</code> can increase a developer&apos;s efficiency immensely.</p>
+                    <ul>
+                        <li class="list-item">
+                            Using 2-3 different font families create lisible pages. A key feature in combining a serif and a sans&dash;font tweaking the contrast &lpar;lankiness and plumpness&rpar; between them. Two font families from different types look well together when they are not too similar or too divergent.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">:root</span> {
+    <span class="cd-comment">/* Fonts */</span>
+    <span class="cd-text">--ff-serif</span>: <span class="cd-prop">'Noto Serif'</span>, <span class="cd-prop">Cambria</span>, <span class="cd-prop">Cochin</span>, <span class="cd-prop">serif</span>;
+    <span class="cd-text">--ff-sans-serif</span>: <span class="cd-prop">Lato</span>, <span class="cd-prop">'Lucida Sans'</span>, <span class="cd-prop">Verdana</span>, <span class="cd-prop">sans-serif</span>;
+    <span class="cd-text">--ff-mnsp</span>: <span class="cd-prop">'Roboto Mono'</span>, <span class="cd-prop">'Courier New'</span>, <span class="cd-prop">Courier</span>, <span class="cd-prop">monospace</span>;
+}</code></pre>
+                        </li>
+
+                        <li class="list-item">
+                            Defining colors in HSL format but not in <code>hsl&lpar;&rpar;</code>, allows the developer to easily adjust the opacity. It is also possible to take it a step further and define different hue, saturation, brightness and alpha values. <span class="attn">Attention: This method prevents the developer to see these colors on the working CSS file.</span>
+                            <pre class="code-snippet">
+<code><span class="cd-tag">:root</span> {
+    <span class="cd-comment">/* Colors */</span>
+    <span class="cd-prop">--clr-base</span>: <span class="cd-number">300</span>, <span class="cd-number">40%</span>, <span class="cd-number">15%</span>;
+    <span class="cd-prop">--clr-accent</span>: <span class="cd-number">10</span>, <span class="cd-number">60%</span>, <span class="cd-number">50%</span>;
+}</code></pre>
+                        </li>
+
+                        <li class="list-item">
+                            A few reference outlines or borders help adjusting the layout.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">:root</span> {
+    <span class="cd-comment">/* Reference outline & border *</span>
+    <span class="cd-text">--ref-out-1</span>: <span class="cd-number">3px</span> <span class="cd-prop">solid white</span>;
+    <span class="cd-text">--ref-out-2</span>: <span class="cd-number">3px</span> <span class="cd-prop">solid limegreen</span>;
+}</code></pre>
+                        </li>
+
+
+                        <li class="list-item">
+                            Setting up animation durations can save time when altering with durations and delays.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">:root</span> {
+    <span class="cd-comment">/* Durations */</span>
+    <span class="cd-text">--dur</span>: <span class="cd-number">200ms</span>;
+    <span class="cd-text">--delay</span>: <span class="cd-number">100ms</span>; 
+}</code></pre>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <h3>Setup the body</h3>
+                    <p>Defining wanted and unwanted behavior can be time saving during development and provide better user experience.</p>
+                    <ul>
+                        <li class="list-item">
+                            Setting <code>&lt;body&gt;</code> height to device height ensures that the whole screen area is being rendered &lpar;This is critical if you have a background image that covers the whole page&rpar; and prevents a footer on a short page to float up in the middle.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">body</span> { 
+    <span class="cd-prop">min-height</span>: <span class="cd-number">100vh</span>;
+}</code></pre>
+                        </li>
+
+
+                        <li class="list-item">
+                            The default <code>line&dash;height</code> is 1.4, which can make a page difficult to read where the content gets a little crowded. Setting the line-height to 1.5-1.7 increase lisiblity of long documents.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">body</span> { 
+    <span class="cd-prop">line-height</span>: <span class="cd-number">1.6</span>;
+}</code></pre>
+                        </li>
+
+                        <li class="list-item">
+                            If the content doesn't containt any tabular data, it is considered best practice to hide overflowing content in the x direction. This also prevents <code>image</code>s and <code>figure</code>s altering the layout.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">body</span> { 
+    <span class="cd-prop">overflow-x</span>: <span class="cd-prop">hidden</span>;
+}</code></pre>
+                        </li>
+
+                        <li class="list-item">
+                            Test the custom properties and see how they work. This both ensures anything being displayed in color not contained in your palette or not in your selected font families.
+                            <pre class="code-snippet">
+<code><span class="cd-tag">body</span> { 
+    <span class="cd-prop">font-family</span>: <span class="cd-prop">var</span>(<span class="cd-text">--ff-sans-serif</span>);
+    <span class="cd-prop">background-color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-gray-dark</span>));
+    <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-gray-light</span>));
+}</code></pre>
+                        </li>
+                        
+                        <li class="list-item">
+                            <pre class="code-snippet">
+<code><span class="cd-tag">body</span> { 
+    <span class="cd-prop">line-height</span>: <span class="cd-number">1.6</span>;
+    <span class="cd-prop">min-height</span>: <span class="cd-number">100vh</span>;
+    <span class="cd-prop">padding</span>: min(<span class="cd-number">1em</span>, <span class="cd-number">3%</span>);
+}</code></pre>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <h3>Disable animations</h3>
+                    <p>CSS transitions and animations are great ways to create more engaging website. However, not everyone browses a webpage the same way. In fact, some need to disable all animations entirely just to not get a terrible headache.</p>
+                    <pre class="code-snippet">
+<code><span class="cd-comment">/* A11Y - Remove all animations, transitions and smooth scroll for people who've turned them off */</span>
+<span class="cd-media">@media</span> (<span class="cd-prop">prefers-reduced-motion: reduce</span>) {
+    <span class="cd-tag">html</span><span class="cd-prop">:focus-within</span> {
+        <span class="cd-prop">scroll-behavior</span>: <span class="cd-prop">auto</span>;
+    }
+    
+    <span class="cd-tag">*, *::before, *::after</span> {
+        <span class="cd-prop">animation-duration</span>: <span class="cd-number">0.01ms</span> !important;
+        <span class="cd-prop">animation-iteration-count</span>: <span class="cd-number">1</span> !important;
+        <span class="cd-prop">transition-duration</span>: <span class="cd-number">0.01ms</span> !important;
+        <span class="cd-prop">scroll-behavior</span>: <span class="cd-prop">auto</span> !important;
+    }
+}</code></pre>
+                </li>
+
+                <li>
+                    <h3>For screen readers only</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quos ab expedita at perspiciatis rerum corrupti temporibus iusto fugiat nihil quibusdam fuga molestias sunt, ipsam ratione molestiae error incidunt similique.</p>
+                    <pre class="code-snippet">
+<code><span class="cd-comment">/* A11Y - screen reader only: only for assistive technologies which read the page out loud */</span>
+<span class="cd-tag">.sr-only</span> {
+    <span class="cd-prop">position</span>: <span class="cd-prop">absolute</span>;
+    <span class="cd-prop">width</span>: <span class="cd-number">1px</span>;
+    <span class="cd-prop">height</span>: <span class="cd-number">1px</span>;
+    <span class="cd-prop">padding</span>: <span class="cd-number">0</span>;
+    <span class="cd-prop">margin</span>: <span class="cd-number">-1</span>;
+    <span class="cd-prop">overflow</span>: <span class="cd-prop">hidden</span>;
+    <span class="cd-prop">clip</span>: <span class="cd-prop">rect</span>(<span class="cd-number">0</span>, <span class="cd-number">0</span>, <span class="cd-number">0</span>, <span class="cd-number">0</span>);
+    <span class="cd-prop">white-space</span>: <span class="cd-prop">nowrap</span>;
+    <span class="cd-prop">border</span>: <span class="cd-number">0</span>;
+}</code></pre>
+                </li>
+            </ul>
+        </section>
+
+        
+        <section class="main-section">
+            <header id="Responsive_Units"><h2>Responsive Units</h2></header>
+            <ul class="section-contents">
+                <li>
+                    <h3>Why to avoid&ast; absolute units</h3>
+                    <p>Absolute units are great during the learning process; but when it comes down to putting the knowledge into practice, they fail us developers at resposiveness. Absolute units might cause adding more than necessary media queries in order to provide smooth transitions through all screen sizes. At first it can feel strange to work with relative units and you don&apos;t feel like you know what you&apos;re doing, but after a short adaptation period, resposiveness becomes so much easier to deal with.</p>
+                    <ul>&lpar; &ast; &rpar; There are a few situations in which absolute units don&apos;t interfere with your design intentions and actually improves consistency &colon;
+                        <li class="list-item">Media queries work best with absolute units.</li>
+                        <li class="list-item">Using px for borders, outlines and some lines created with pseudo-elements makes sure that you have the same thickness &lpar;width, height, weight&rpar; no matter the size. If you prefer, you can adjust this by adding 1-2 more media queries &lpar;for mobile, tablet &amp; laptop, large screens&rpar; with different thickness values.</li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <h3>Where to use which unit</h3>
+                </li>
+            </ul>
+        </section>
+
+<!-- 
+        <section class="main-section">
+            <header id="Flex_&_Grid"><h2>Flex & Grid</h2></header>
+            <ul class="section-contents">
+                <li><h3>Flex</h3></li>
+                <li><h3>Grid</h3></li>
+                <li><h3>Combining both</h3></li>
+            </ul>
+        </section>
+
+        <section class="main-section">
+            <header id="Pseudo_Classes_&_Elements"><h2>Pseudo Classes & Elements</h2></header>
+            <ul class="section-contents">
+                <li><h3>Main purpose &amp; difference</h3></li>
+                <li><h3>Pseudo classes</h3></li>
+                <li><h3>Pseudo elements</h3></li>
+            </ul>
+        </section>
+        
+
+        <section class="main-section">
+            <header id="Interactive_Webpages"><h2>Interactive Webpages</h2></header>
+            <ul class="section-contents">
+                <li><h3>Link states</h3></li>
+                <li><h3>Button states</h3></li>
+                <li><h3>Giving feedback</h3></li>
+                <li><h3>Validation</h3></li>
+            </ul>
+        </section>
+-->
+    </main>
+
+    <footer>
+        <p>Design &amp; Development by <a href="https://github.com/elifaltundag">Elif Altundag</a></p>
+    </footer>
+    
+</body>
+</html>
