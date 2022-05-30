@@ -153,6 +153,10 @@ html {
 /*! -------------------- */
 /*! TYPOGRAPHY           */
 /*! -------------------- */
+h1, h2, h3, h4 {
+    padding-top: 1em;
+}
+
 h1, h2 {
     font-family: var(--ff-serif);
     color: hsl(var(--clr-base));
