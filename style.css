@@ -137,6 +137,7 @@ html {
 .cd-comment { color: var(--cd-gray);}
 .cd-text { color: var(--cd-orange);}
 .cd-tag { color: var(--cd-green);}
+.cd-tag-title { color: hsl(var(--clr-base)); }
 .cd-number { color: var(--cd-red);}
 
 .table-prop-exp {
