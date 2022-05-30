@@ -286,6 +286,7 @@ td {
 
 #navbar[menu-visible="true"] {
     transform: translateY(0);
+    transition: transform 500ms ease;
 }
 
 #mobile-nav-menu {
