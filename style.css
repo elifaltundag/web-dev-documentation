@@ -141,7 +141,7 @@ html {
 
 .table-prop-exp {
     display: block;
-    width: 20ch;
+    width: 15ch;
     margin-top: 0.5em;
     margin-right: 1em;
     font-size: clamp(0.9rem, 0.4rem + 0.7vw, 1.1rem);
@@ -452,6 +452,10 @@ body::-webkit-scrollbar-thumb {
     #main-doc {
         border-bottom: none;
         border-top: none;
+    }
+
+    .table-prop-exp {
+        width: 20ch;
     }
 
 }
