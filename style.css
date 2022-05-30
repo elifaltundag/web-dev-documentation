@@ -46,6 +46,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;    
     font-family: var(--ff-sans-serif);
+    overflow-x: hidden;
 
     background-color: hsl(var(--clr-gray-dark));
     color: hsl(var(--clr-gray-light));
@@ -220,7 +221,7 @@ body {
         "footer";
     row-gap: 1.3rem;
     position: relative;
-    padding: 0 1.5em;
+    padding: 1.5em;
 }
 
 #navbar {
@@ -269,6 +270,11 @@ td {
 /*! -------------------- */
 /*! NAV BAR              */
 /*! -------------------- */
+#navbar {
+    position: fixed;
+    transform: translateY(-100%);
+}
+
 #mobile-nav-menu {
     display: block;
     position: fixed;
@@ -289,14 +295,18 @@ td {
 }
 
 .btn-nav-toggle {
-    width: 7ch;
+    width: 8ch;
     border: none;
     background-color: transparent;
-    padding: 1.2em 0.5em;
+    padding: 1em;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
 }
 
-#hamburger {
+.hamburger {
+    display: inline-block;
     background-color: hsl(var(--clr-base));
     color: hsl(var(--clr-base));
     width: 100%;
@@ -307,7 +317,7 @@ td {
     position: relative;
 }
 
-#hamburger::before {
+/* #hamburger::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -329,7 +339,7 @@ td {
     left: 0;
     bottom: -8px;
 
-}
+} */
 
 /*! -------------------- */
 /*! SECTIONAL ELEMENTS   */
@@ -337,15 +347,6 @@ td {
 #description {
     margin-bottom: 1em;
 }
-
-/* #main-doc::before {
-    position: absolute;
-    top: -1em;
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: hsla(var(--clr-base), 0.3);
-} */
 
 
 
@@ -422,6 +423,7 @@ body::-webkit-scrollbar-thumb {
             "navbar footer";
         row-gap: 1.5em;
         column-gap: 3em;
+        padding-right: 2em;
     }
 
     #mobile-nav-menu {
@@ -436,9 +438,10 @@ body::-webkit-scrollbar-thumb {
         top: 0;
         left: 0;
         bottom: 0;
-        padding: 0 1.5em;
+        padding: 2em 1.5em;
         overflow-y: hidden;
         overflow-y: auto;
+        transform: none;
     }
 
     main {

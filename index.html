@@ -20,14 +20,15 @@
     <div id="mobile-nav-menu">
         <button class="btn-nav-toggle" aria-controls="navbar" aria-expanded="false">
             <span class="sr-only">Menu</span>
-            <div id="hamburger"></div>
+            <div id="hamburger-1" class="hamburger"></div>
+            <div id="hamburger-2" class="hamburger"></div>
+            <div id="hamburger-3" class="hamburger"></div>
         </button>
     </div>
     
     <nav id="navbar">        
         <header>
-            <h1><a href="#">Technical Documentation for HTML &amp; CSS</a></h1>
-            <p id="description">A brief guide to responsiveness, accessibility and interactivity in web design &amp; development</p></header>
+            <p id="description"></p></header>
         <ul id="navigation">
             <li>
                 <a href="#Semantic_HTML" class="nav-link">Semantic HTML</a>
@@ -85,7 +86,12 @@
         </ul>
     </nav>
 
-    <main id="main-doc">        
+    <main id="main-doc">
+        <section>
+            <h1><a href="#">Technical Documentation for HTML &amp; CSS</a></h1>
+            <p>Technical documentation for HTML &amp; CSS&colon; A brief guide to responsiveness, accessibility and interactivity in web design &amp; development</p>
+        </section>
+                
         <section id="Semantic_HTML" class="main-section">
             <header><h2>Semantic HTML</h2></header>
             <ul class="section-contents">
@@ -313,6 +319,8 @@
 }</code></pre>
                 </li>
             </ul>
+
+            <p>For a more detailed CSS reset template, check out <a href="https://piccalil.li/blog/a-modern-css-reset/">Andy Bell&apos;s blogpost</a>.</p>
         </section>
 
         
