@@ -372,7 +372,7 @@ a:active {
 }
 
 
-/* Scroll bar */
+/*  
 body::-webkit-scrollbar {
     width: min(20px, 3.5vw);
     border-radius: 100px;
@@ -403,7 +403,7 @@ body::-webkit-scrollbar-thumb {
     background-color: hsla(var(--clr-base), 0.7);
     border-radius: 100px;
     border: 3px solid hsl(var(--clr-base-dark));
-}
+} */
 
 
 /*! -------------------- */
@@ -463,8 +463,3 @@ body::-webkit-scrollbar-thumb {
 /*! -------------------- */
 /*! HOVER STATES         */
 /*! -------------------- */
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: hsla(var(--clr-base), 1);
-   
-}
