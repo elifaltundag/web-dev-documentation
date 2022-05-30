@@ -15,8 +15,8 @@
         /* purple: 292, 75%, 50%; */
         /* orange: 22, 75%, 50%; */
         /* pink: 343, 75%, 60%; */ 
-    --clr-base-dark: 140, 55%, 45%;
-    --clr-base-bright: 140, 95%, 70%; 
+    --clr-base-dark: 140, 55%, 20%;
+    --clr-base-bright: 140, 80%, 65%; 
     --clr-accent: 45, 75%, 62%;
     --clr-light: 0, 0%, 93%;
     
@@ -372,6 +372,39 @@ a:active {
 }
 
 
+/* Scroll bar */
+body::-webkit-scrollbar {
+    width: min(20px, 3.5vw);
+    border-radius: 100px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: hsl(var(--clr-base-dark));
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: hsla(var(--clr-base), 0.7);
+    border-radius: 100px;
+    border: 3px solid hsl(var(--clr-base-dark));
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: hsl(var(--clr-base-dark));
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsla(var(--clr-base), 0.7);
+    border-radius: 100px;
+    border: 3px solid hsl(var(--clr-base-dark));
+}
+
 
 /*! -------------------- */
 /*! MEDIA QUERIES        */
@@ -398,7 +431,7 @@ a:active {
     #navbar {
         width: min(40ch, 30vw);
         grid-area: navbar;
-        border-right: 1px solid hsla(var(--clr-base), 0.7);
+        border-right: 1px solid hsla(var(--clr-base), 0.3);
         position: fixed;
         top: 0;
         left: 0;
@@ -420,4 +453,14 @@ a:active {
         border-bottom: none;
         border-top: none;
     }
+
+}
+
+/*! -------------------- */
+/*! HOVER STATES         */
+/*! -------------------- */
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(var(--clr-base), 1);
+   
 }
