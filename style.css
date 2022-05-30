@@ -104,6 +104,7 @@ html {
     margin-top: 0;
     margin-bottom: 1em;
     padding-left: 1em;
+    display: none;
 }
 
 .nav-link {
@@ -432,6 +433,10 @@ body::-webkit-scrollbar-thumb {
         overflow-y: hidden;
         overflow-y: auto;
         transform: none;
+    }
+
+    .nav-list {
+        display: block;
     }
 
     main {
