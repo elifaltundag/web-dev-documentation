@@ -429,6 +429,7 @@ body::-webkit-scrollbar-thumb {
         width: min(40ch, 30vw);
         grid-area: navbar;
         border-right: 1px solid hsla(var(--clr-base), 0.3);
+        border-bottom: none;
         position: fixed;
         top: 0;
         left: 0;
