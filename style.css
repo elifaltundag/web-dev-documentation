@@ -300,7 +300,7 @@ td {
 }
 
 #navbar[state="open"] {
-    transform: translateY(15%);
+    transform: translateY(75px);
     transition: transform var(--dur5) ease;
 }
 
