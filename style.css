@@ -234,7 +234,7 @@ body {
         "footer";
     row-gap: 1.3rem;
     position: relative;
-    padding: 1.5em;
+    padding: 1rem;
 }
 
 #navbar {
@@ -491,7 +491,7 @@ body::-webkit-scrollbar-thumb {
             "navbar footer";
         row-gap: 1.5em;
         column-gap: 3em;
-        padding-right: 2em;
+        padding: 0 2em;
     }
 
     #mobile-nav-menu {
