@@ -128,6 +128,7 @@ h2 {
 p {
     font-size: clamp(1rem, 0.5rem + 1vw, 1.15rem);
     margin-top: 0.5em;
+    max-width: 100%;
 }
 
 ul {
@@ -269,6 +270,7 @@ footer {
     grid-area: footer;
     display: flex;
     align-items: center;
+    padding: 5em 0 3em;
 }
 
 
@@ -543,9 +545,5 @@ body::-webkit-scrollbar-thumb {
         overflow-wrap: break-word;
         white-space: pre-wrap;
     }
-
 }
 
-/*! -------------------- */
-/*! HOVER STATES         */
-/*! -------------------- */
