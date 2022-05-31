@@ -11,41 +11,33 @@ hamburger.addEventListener("click", () => {
     // Check navBar visibility
     const navBarOpen = navBar.getAttribute("state");
 
+    // Change the state
     // If the navbar is closed, open it
     if (navBarOpen === "closed") {
         navBar.setAttribute("state", "open");
     
-     
     // If the navbar is open, close it
     } else {
         navBar.setAttribute("state", "closed");
-    
-    }
-
-    // Get the states of the hamburger button
-    const hambTopState = hambTop.getAttribute("state");
-    const hambMidState = hambMid.getAttribute("state");
-    const hambBtmState = hambBtm.getAttribute("state");
-    
-    if (hambTopState === "hamburger") {
-        hambTop.setAttribute("state", "cross");
-    } else if (hambTopState === "cross") {
-        hambTop.setAttribute("state", "hamburger");
-    }
-
-    if (hambMidState === "hamburger") {
-        hambMid.setAttribute("state", "cross");
-    } else if (hambMidState === "cross") {
-        hambMid.setAttribute("state", "hamburger");
-    }
-
-    if (hambBtmState === "hamburger") {
-        hambBtm.setAttribute("state", "cross");
-    } else if (hambBtmState === "cross") {
-        hambBtm.setAttribute("state", "hamburger");
     }
 
     
+    
+    // Change the toggle button
+    const hambButtons = [hambTop, hambMid, hambBtm];
+    hambButtons.forEach(button => {
+        // Get the states of the hamburger button
+        let btnState = button.getAttribute("state");
+
+        // If it is hamburger, change it to cross
+        if (btnState === "hamburger") {
+            button.setAttribute("state", "cross");
+        
+        // If it is cross, change it to hamburger
+        } else if (btnState === "cross") {
+            button.setAttribute("state", "hamburger");
+        }
+    })
 });
 
 
