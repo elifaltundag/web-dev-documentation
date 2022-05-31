@@ -11,14 +11,17 @@
     --clr-dark: 0, 0%, 7%;
     --clr-gray-dark: 0, 0%, 12%;
     --clr-gray-light: 0, 0%, 80%; 
-    --clr-base: 140, 60%, 45%; 
-        /* purple: 292, 75%, 50%; */
-        /* orange: 22, 75%, 50%; */
-        /* pink: 343, 75%, 60%; */ 
-    --clr-base-dark: 140, 55%, 20%;
-    --clr-base-bright: 140, 80%, 65%; 
-    --clr-accent: 50, 60%, 58%;
     --clr-light: 0, 0%, 93%;
+    
+    /* purple: 292, 75%, 50%; */
+    /* orange: 22, 75%, 50%; */
+    /* pink: 343, 75%, 60%; */
+    --clr-base: 140, 60%, 45%;      
+    --clr-base-dark: 140, 55%, 20%;
+    --clr-base-light: 140, 80%, 65%; 
+    
+    --clr-accent: 50, 60%, 58%;
+    
     
     /** Code snippets colors */
     --cd-red: hsl(5, 55%, 55%);
@@ -27,6 +30,14 @@
     --cd-yellow: hsl(60, 55%, 45%);
     --cd-orange: hsl(25, 55%, 55%);
     --cd-gray: hsl(0, 0%, 65%);
+
+    /** Navbar transition durations */
+    --dur1: 100ms;
+    --dur2: 200ms;
+    --dur3: 300ms;
+    --dur4: 400ms;
+    --dur5: 500ms;
+
 }
 
 
@@ -156,8 +167,8 @@ html {
 /*! TYPOGRAPHY           */
 /*! -------------------- */
 h1 {
-    margin-top: 2em;
-}
+    margin-top: 1.5em;
+} 
 
 h2, h3, h4 {
     margin-top: 1em;
@@ -266,8 +277,9 @@ thead, tr {
 }
 
 td {
-    padding: 0.5em 0.4em;
+    padding: 0.5em 1em;
 }
+
 
 /*! -------------------- */
 /*! NAV BAR              */
@@ -287,9 +299,9 @@ td {
     
 }
 
-#navbar[menu-visible="true"] {
+#navbar[state="open"] {
     transform: translateY(15%);
-    transition: transform 500ms ease;
+    transition: transform var(--dur5) ease;
 }
 
 #mobile-nav-menu {
@@ -299,10 +311,9 @@ td {
     right: 0;
     top: 0;
     width: 100%;
-    height: 5ch;
     background-color: hsl(var(--clr-gray-dark));
     z-index: 500;
-    padding: 0 2ch;
+    padding: 1ch 2ch;
 
     border-bottom: 2px solid hsla(var(--clr-base), 0.7);
 
@@ -312,20 +323,81 @@ td {
 }
 
 .btn-nav-toggle {
-    width: 8ch;
+    aspect-ratio: 1;
     border: none;
     background-color: transparent;
     padding: 1em;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     row-gap: 6px;
     z-index: 500;
 }
 
-.hamburger {
+#hamburger-top[state="hamburger"],
+#hamburger-middle[state="hamburger"],
+#hamburger-bottom[state="hamburger"],
+#hamburger-middle[state="cross"],
+#hamburger-top[state="cross"],
+#hamburger-bottom[state="cross"] {
     display: inline-block;
     background-color: hsl(var(--clr-base));
+    color: hsl(var(--clr-base));
+    width: calc(21px * 1.41);
+    height: 3px;
+    border-radius: 1ch;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    
+
+    transition: 
+        transform var(--dur5) ease,
+        opacity var(--dur2) ease;
+}
+
+
+#hamburger-middle[state="hamburger"] {
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+
+#hamburger-middle[state="cross"] {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+
+#hamburger-top[state="hamburger"] {
+    transform-origin: top right;
+    transform: rotate(0);
+}
+
+
+
+#hamburger-bottom[state="hamburger"] {
+    transform-origin: bottom right;
+    transform: rotate(0);
+}
+
+
+
+#hamburger-top[state="cross"] {
+    transform-origin: top right;
+    transform: rotate(-40deg);
+}
+
+#hamburger-bottom[state="cross"] {
+    transform-origin: bottom right;
+    transform: rotate(40deg);
+}
+
+
+/* .hamburger[state="cross"] {
+    display: inline-block;
+    background-color: red hsl(var(--clr-base));
     color: hsl(var(--clr-base));
     width: 100%;
     height: 3px;
@@ -333,7 +405,7 @@ td {
     position: relative;
     cursor: pointer;
     position: relative;
-}
+} */
 
 
 /*! -------------------- */
@@ -363,8 +435,8 @@ a:hover {
 }
 
 a:active {
-    color: hsl(var(--clr-base-bright));
-    border-bottom: 1px solid hsl(var(--clr-base-bright));
+    color: hsl(var(--clr-base-light));
+    border-bottom: 1px solid hsl(var(--clr-base-light));
 }
 
 
@@ -406,9 +478,6 @@ body::-webkit-scrollbar-thumb {
 /*! MEDIA QUERIES        */
 /*! -------------------- */
 @media screen and (min-width: 850px) {
-    h1 {
-        margin-top: 1rem;
-    }
     /** Main grid */
     body {
         display: grid;  

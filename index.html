@@ -23,13 +23,13 @@
     <div id="mobile-nav-menu">
         <button id="btn-hamburger" class="btn-nav-toggle" aria-controls="navbar" aria-expanded="false">
             <span class="sr-only">Menu</span>
-            <div id="hamburger-1" class="hamburger"></div>
-            <div id="hamburger-2" class="hamburger"></div>
-            <div id="hamburger-3" class="hamburger"></div>
+            <div id="hamburger-top" state="hamburger"></div>
+            <div id="hamburger-middle" state="hamburger"></div>
+            <div id="hamburger-bottom" state="hamburger"></div>
         </button>
     </div>
     
-    <nav id="navbar" menu-visible="false">        
+    <nav id="navbar" state="closed">        
         <header>
             <p id="description"></p></header>
         <ul id="navigation">
@@ -105,7 +105,7 @@
                         <li class="list-item">Search engines will consider its content as important keywords which improves the page&apos;s <abbr title="Search Engine Optimization">SEO</abbr></li>
                         <li class="list-item">Text to speach screen readers can use them as indicators to help visually impaired users navigate the page</li>
                         <li class="list-item">Finding blocks of meaningful code is significantly easier than searching through endless <code>&lt;div&gt;</code>s with or without semantic tags</li>
-                        <li class="list-item">They suggest the developer the type of data that needs to be populated</li>
+                        <li class="list-item">They suggest the the type of data that needs to be populated</li>
                         <li class="list-item">Semantic naming mirrors proper custom element and component naming</li>
                     </ul>
                 </li>
@@ -243,8 +243,8 @@
                             <pre class="code-snippet">
 <code><span class="cd-tag">:root</span> {
     <span class="cd-comment">/* Reference outline & border *</span>
-    <span class="cd-text">--ref-out-1</span>: <span class="cd-number">3px</span> <span class="cd-prop">solid white</span>;
-    <span class="cd-text">--ref-out-2</span>: <span class="cd-number">3px</span> <span class="cd-prop">solid limegreen</span>;
+    <span class="cd-text">--ref-out-1</span>: <span class="cd-number">3px</span> <span class="cd-prop">solid red</span>;
+    <span class="cd-text">--ref-out-2</span>: <span class="cd-number">3px</span> <span class="cd-prop">solid yellow</span>;
 }</code></pre>
                         </li>
 
