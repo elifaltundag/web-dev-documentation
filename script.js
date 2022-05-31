@@ -18,7 +18,7 @@ hamburger.addEventListener("click", () => {
         navBar.setAttribute("state", "open");
     
     // If the navbar is open, close it
-    } else {
+    } else if (navBarOpen === "open") {
         navBar.setAttribute("state", "closed");
     }
 
