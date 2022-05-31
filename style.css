@@ -11,21 +11,21 @@
     --clr-dark: 0, 0%, 7%;
     --clr-gray-dark: 0, 0%, 12%;
     --clr-gray-light: 0, 0%, 80%; 
-    --clr-base: 140, 80%, 55%; 
+    --clr-base: 140, 60%, 45%; 
         /* purple: 292, 75%, 50%; */
         /* orange: 22, 75%, 50%; */
         /* pink: 343, 75%, 60%; */ 
     --clr-base-dark: 140, 55%, 20%;
     --clr-base-bright: 140, 80%, 65%; 
-    --clr-accent: 45, 75%, 62%;
+    --clr-accent: 50, 60%, 58%;
     --clr-light: 0, 0%, 93%;
     
     /** Code snippets colors */
-    --cd-red: hsl(5, 75%, 70%);
-    --cd-blue: hsl(200, 80%, 70%);
-    --cd-green: hsl(150, 75%, 60%);
-    --cd-yellow: hsl(60, 75%, 50%);
-    --cd-orange: hsl(25, 80%, 70%);
+    --cd-red: hsl(5, 55%, 55%);
+    --cd-blue: hsl(200, 55%, 55%);
+    --cd-green: hsl(var(--clr-base));
+    --cd-yellow: hsl(60, 55%, 45%);
+    --cd-orange: hsl(25, 55%, 55%);
     --cd-gray: hsl(0, 0%, 65%);
 }
 
