@@ -5,6 +5,11 @@ const hambTop = document.querySelector("#hamburger-top");
 const hambMid = document.querySelector("#hamburger-middle");
 const hambBtm = document.querySelector("#hamburger-bottom");
 
+
+// MAKE IT WORK ON MOBILE ONLY
+const mediaQuery = window.matchMedia("(min-width: 850px)");
+
+if (mediaQuery.matches) {
 // GETTING THE MOBILE NAV MENU WORKING
 // WHEN (hamburger is clicked)
 hamburger.addEventListener("click", () => {
@@ -21,8 +26,6 @@ hamburger.addEventListener("click", () => {
         navBar.setAttribute("state", "closed");
     }
 
-    
-    
     // Change the toggle button
     const hambButtons = [hambTop, hambMid, hambBtm];
     hambButtons.forEach(button => {
@@ -39,5 +42,7 @@ hamburger.addEventListener("click", () => {
         }
     })
 });
+
+}
 
 
