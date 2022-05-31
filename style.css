@@ -137,7 +137,7 @@ html {
 }
 
 .code-snippet {
-    margin: 0.7em auto 1.5em;
+    margin: 0.7em 0 1.5em;
     max-width: max-content;
     overflow-wrap: break-word;
     white-space: pre-wrap;
@@ -526,6 +526,13 @@ body::-webkit-scrollbar-thumb {
 
     .table-prop-exp {
         width: 20ch;
+    }
+
+    .code-snippet {
+        margin-left: 3em;
+        max-width: max-content;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
     }
 
 }
