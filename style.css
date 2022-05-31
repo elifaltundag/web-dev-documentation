@@ -146,7 +146,7 @@ code {
 
 abbr {
     text-underline-offset: 0.1em;
-    color: hsl(var(--clr-accent));
+    color: hsl(var(--clr-base));
 }
 
 .attn {
@@ -269,7 +269,7 @@ main {
 footer {
     grid-area: footer;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 5em 0 3em;
 }
 
