@@ -304,6 +304,12 @@ td {
     transition: transform var(--dur5) ease;
 }
 
+#navbar[state="closed"] {
+    transform: translateY(-120%);
+    transition: transform var(--dur5) ease;
+}
+
+
 #mobile-nav-menu {
     display: block;
     position: fixed;
@@ -312,7 +318,7 @@ td {
     top: 0;
     width: 100%;
     background-color: hsl(var(--clr-gray-dark));
-    z-index: 500;
+    z-index: 600;
     padding: 1ch 2ch;
 
     display: flex;
