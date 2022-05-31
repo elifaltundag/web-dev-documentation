@@ -62,9 +62,9 @@
             <li>
                 <a href="#Flex_&_Grid" class="nav-link">Flex &amp; Grid</a>
                 <ul class="nav-list">
-                    <li><a href="#">Flex</a></li>
-                    <li><a href="#">Grid</a></li>
-                    <li><a href="#">Combining both</a></li>
+                    <li><a href="#flex">Flex</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#flex-grid">Combining both</a></li>
                 </ul>
             </li>
 
@@ -393,16 +393,91 @@
             </ul>
         </section>
 
-<!-- 
-        <section class="main-section">
-            <header id="Flex_&_Grid"><h2>Flex & Grid</h2></header>
+ 
+        <section id="Flex_&_Grid" class="main-section">
+            <header><h2>Flex & Grid</h2></header>
             <ul class="section-contents">
-                <li><h3>Flex</h3></li>
-                <li><h3>Grid</h3></li>
-                <li><h3>Combining both</h3></li>
+                <li id="flex">
+                    <h3>Flex</h3>
+                    <p>When learning responsive layouts, developers usually start with flexbox whose introduction was a great CSS update saving developers from <code>float</code>s in order to get fluidity on pages.</p>
+                    <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">This guide</a> on flexbox written by Chris Coyier from <a href="https://css-tricks.com/" target="_blank">css-tricks.com</a> explains thoroughly how flexbox implementations work and this <a href="https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png" target="_blank" class="attn">flexbox cheatsheet poster</a> summarizes it up visually.</p>
+                    <p></p>
+        
+                </li>
+                
+                
+                <li id="grid">
+                    <h3>Grid</h3>
+                    <p>After flexbox came grid which opened up a whole new world of possibilities for layouts. Grids became popular fast as they provide consistency and fluidity without wrapping and overflowing. However, one thing that most developers struggle with at the early stages of their front-end roadmaps is switching from flexbox to grid&semi; since grid requires more coding in general.</p>
+                    <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">This guide</a> on grid written by Chris House from <a href="https://css-tricks.com/" target="_blank">css-tricks.com</a> explains thoroughly how grid implementations work and this <a href="https://css-tricks.com/wp-content/uploads/2022/02/css-grid-poster.png" target="_blank" class="attn">grid cheatsheet poster</a> summarizes it up visually.</p>
+                </li>
+                
+                
+                <li id="flex-grid">
+                    <h3>Combining both</h3>
+                    <p>Using flex only or grid only can bring more work load than anticipated. Combining them on the other hand, although might seem difficult and complicated first, lets developers build systematic layouts.</p>
+                    <p>With <code>grid-template-areas</code>, 2-4 different layouts &lpar;mobile, laptop, desktop, large screen&rpar; are easily created. The children of the grid container then can be assigned flex. This way a general and steady layout is created while letting the content move in it&apos;s maximum space without causing any problematic behaviour.</p>
+                    <pre class="code-snippet">
+<code><span class="cd-comment">/* Main grid */</span>
+<span class="cd-tag">body</span> {
+    <span class="cd-prop">display</span>: <span class="cd-prop">grid</span>;
+    <span class="cd-prop">grid-template-areas</span>: 
+        <span class="cd-prop">"navbar" 
+        "hero"
+        "intro"
+        "services"
+        "about-us"
+        "footer"</span>;
+    <span class="cd-prop">row-gap</span>: <span class="cd-number">1.3rem</span>;
+    <span class="cd-prop">padding</span>: <span class="cd-number">1rem</span>;
+}
+
+<span class="cd-comment">/* Assign grid areas */</span>
+<span class="cd-prop">#navbar</span> { <span class="cd-prop">grid-area</span>: navbar; }
+<span class="cd-prop">#hero</span> { <span class="cd-prop">grid-area</span>: hero; }
+<span class="cd-prop">#intro</span> { <span class="cd-prop">grid-area</span>: intro; }
+<span class="cd-prop">#services</span> { <span class="cd-prop">grid-area</span>: services; }
+<span class="cd-prop">#about-us</span> { <span class="cd-prop">grid-area</span>: about-us; }
+<span class="cd-prop">#footer</span> { <span class="cd-prop">grid-area</span>: footer; }
+
+<span class="cd-comment">/* Flex containers */</span>
+<span class="cd-prop">#navbar</span>,
+<span class="cd-prop">#hero</span>,
+<span class="cd-prop">#intro</span>,
+<span class="cd-prop">#services</span>, 
+<span class="cd-prop">#about-us</span>, 
+<span class="cd-prop">#footer</span> {
+    <span class="cd-prop">display</span>: <span class="cd-prop">flex</span>;
+}
+
+
+<span class="cd-comment">/* Media queries */</span>
+<span class="cd-media">@media</span> <span class="cd-prop">screen</span> <span class="cd-media">and</span> (<span class="cd-prop">min-width</span>: <span class="cd-number">750px</span>) {
+    <span class="cd-tag">body</span> {
+        <span class="cd-prop">grid-template-areas</span>: 
+            <span class="cd-prop">"navbar navbar"
+            "hero intro"
+            "services services"
+            "about-us about-us"
+            "footer footer"</span>;
+    }
+}
+
+<span class="cd-media">@media</span> <span class="cd-prop">screen</span> <span class="cd-media">and</span> (<span class="cd-prop">min-width</span>: <span class="cd-number">1800px</span>) {
+    <span class="cd-tag">body</span> {
+        <span class="cd-prop">grid-template-areas</span>: 
+            <span class="cd-prop">"navbar hero"
+            "navbar intro"
+            "navbar services"
+            "navbar about-us"
+            "footer footer"</span>;
+    }
+}</code></pre>
+                </li>
             </ul>
         </section>
 
+        <!--
         <section class="main-section">
             <header id="Pseudo_Classes_&_Elements"><h2>Pseudo Classes & Elements</h2></header>
             <ul class="section-contents">
