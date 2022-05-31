@@ -552,6 +552,6 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (min-width: 1500px) {
     #main-doc {
-        max-width: 150ch;
+        max-width: 130ch;
     }
 }
