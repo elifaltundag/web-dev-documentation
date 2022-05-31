@@ -389,7 +389,7 @@
                 <li id="flex">
                     <h3>Flex</h3>
                     <p>When learning responsive layouts, developers usually start with flexbox whose introduction was a great CSS update saving developers from <code>float</code>s in order to get fluidity on pages.</p>
-                    <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">This guide</a> on flexbox written by Chris Coyier from <a href="https://css-tricks.com/" target="_blank">css-tricks.com</a> explains thoroughly how flexbox implementations work and this <a href="https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png" target="_blank" class="attn">flexbox cheatsheet poster</a> summarizes it up visually.</p>
+                    <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">This guide</a> on flexbox written by Chris Coyier from <a href="https://css-tricks.com/" target="_blank">css-tricks.com</a> explains thoroughly how flexbox implementations work and this <a href="https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png" target="_blank">flexbox cheatsheet poster</a> summarizes it up visually.</p>
                     <p></p>
         
                 </li>
@@ -398,7 +398,7 @@
                 <li id="grid">
                     <h3>Grid</h3>
                     <p>After flexbox came grid which opened up a whole new world of possibilities for layouts. Grids became popular fast as they provide consistency and fluidity without wrapping and overflowing. However, one thing that most developers struggle with at the early stages of their front-end roadmaps is switching from flexbox to grid&semi; since grid requires more coding in general.</p>
-                    <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">This guide</a> on grid written by Chris House from <a href="https://css-tricks.com/" target="_blank">css-tricks.com</a> explains thoroughly how grid implementations work and this <a href="https://css-tricks.com/wp-content/uploads/2022/02/css-grid-poster.png" target="_blank" class="attn">grid cheatsheet poster</a> summarizes it up visually.</p>
+                    <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">This guide</a> on grid written by Chris House from <a href="https://css-tricks.com/" target="_blank">css-tricks.com</a> explains thoroughly how grid implementations work and this <a href="https://css-tricks.com/wp-content/uploads/2022/02/css-grid-poster.png" target="_blank">grid cheatsheet poster</a> summarizes it up visually.</p>
                 </li>
                 
                 
@@ -487,6 +487,37 @@
                         <li class="list-item"><code>a:active</code> &mdash; When the link is being clicked</li>
                         <li class="list-item"><code>a:focus</code> &mdash; When the link is selected either by clicks or tabs &lpar;When a user navigates with the TAB key&rpar;. It comes last for accessibility reasons, it has the most importance.</li>
                     </ul>
+                    
+                    <pre class="code-snippet">
+<code><span class="cd-comment">/* Link states */
+<span class="cd-tag">a</span><span class="cd-prop"></span> {
+    <span class="cd-prop">text-decoration</span>: <span class="cd-prop">none</span>
+}
+
+<span class="cd-tag">a</span><span class="cd-prop">:link</span> {
+    <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+}
+
+<span class="cd-tag">a</span><span class="cd-prop">:visited</span> {
+    <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+}
+
+<span class="cd-tag">a</span><span class="cd-prop">:hover</span> {
+    <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+    <span class="cd-prop">border-bottom</span>: <span class="cd-number">1px</span> <span class="cd-prop">solid</span> <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+    <span class="cd-prop">filter</span>: <span class="cd-prop">brightness</span>(<span class="cd-number">130%</span>) <span class="cd-prop">saturate</span>(<span class="cd-number">150%</span>);
+}
+
+<span class="cd-tag">a</span><span class="cd-prop">:active</span> {
+    <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base-light</span>));
+    <span class="cd-prop">border-bottom</span>: <span class="cd-number">1px</span> <span class="cd-prop">solid</span> <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base-light</span>));
+}
+
+<span class="cd-tag">a</span><span class="cd-prop">:focus</span> {
+    <span class="cd-prop">color</span>: <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+    <span class="cd-prop">border-bottom</span>: <span class="cd-number">1px</span> <span class="cd-prop">solid</span> <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+    <span class="cd-prop">filter</span>: <span class="cd-prop">brightness</span>(<span class="cd-number">130%</span>) <span class="cd-prop">saturate</span>(<span class="cd-number">150%</span>);   
+}</code></pre>
                 </li>
 
                 <li id="ps-elements">
@@ -497,7 +528,19 @@
                 </li>
 
                 <p>If an HTML element has both pseudo&hyphen;classes and pseudo&hyphen;elements, the pseudo&hyphen;elements inherit those states.</p>
+                <pre class="code-snippet">
+<code><span class="cd-comment">/* Section dividers */ 
+<span class="cd-prop">.main-section</span> {
+    <span class="cd-prop">position</span>: <span class="cd-prop">relative</span>;
+}
 
+<span class="cd-prop">.main-section::before</span> {
+    <span class="cd-prop">position</span>: <span class="cd-prop">absolute</span>;
+    <span class="cd-prop">content</span>: "";
+    <span class="cd-prop">width</span>: <span class="cd-number">100%</span>;
+    <span class="cd-prop">height</span>: <span class="cd-number">2px</span>;
+    <span class="cd-prop">background-color</span> <span class="cd-prop">hsl</span>(<span class="cd-prop">var</span>(<span class="cd-text">--clr-base</span>));
+}</code></pre>
             </ul>
         </section>
     </main>

@@ -237,9 +237,6 @@ thead {
 }
 
 
-
-
-
 /*! -------------------- */
 /*! SECTIONAL ELEMENTS   */
 /*! -------------------- */
@@ -421,7 +418,6 @@ td {
 /*! -------------------- */
 a {
     text-decoration: none;
-    color: hsl(var(--clr-base));
 }
 
 a:link {
@@ -429,7 +425,7 @@ a:link {
 }
 
 a:visited {
-    color: hsl(var(--clr-base-dark));
+    color: hsl(var(--clr-base));
 }
 
 a:hover {
