@@ -68,24 +68,13 @@
                 </ul>
             </li>
 
-            <!-- <li>
+            <li>
                 <a href="#Pseudo_Classes_&_Elements" class="nav-link">Pseudo Classes & Elements</a>
                 <ul class="nav-list">
-                    <li><a href="#">Main purpose &amp; difference</a></li>
-                    <li><a href="#">Pseudo classes</a></li>
-                    <li><a href="#">Pseudo elements</a></li>
+                    <li><a href="#ps-classes">Pseudo classes</a></li>
+                    <li><a href="#ps-elements">Pseudo elements</a></li>
                 </ul>
             </li>
-            
-            <li>
-                <a href="#Interactive_Webpages" class="nav-link">Interactive Webpages</a>
-                <ul class="nav-list">
-                    <li><a href="#">Link states</a></li>
-                    <li><a href="#">Button states</a></li>
-                    <li><a href="#">Giving feedback</a></li>
-                    <li><a href="#">Validation</a></li>
-                </ul>
-            </li> -->
         </ul>
     </nav>
 
@@ -159,7 +148,7 @@
                             <tr>
                                 <td><code class="cd-tag-title">&lt;footer&gt;</code></td>
                                 <td><code>&lt;body&gt;</code></td>
-                                <td>Contains information about the author, copyright data, site&ndash;map and related external links</td>
+                                <td>Contains information about the author, copyright data, site&hyphen;map and related external links</td>
                             </tr>
                             <tr>
                                 <td><code class="cd-tag-title">&lt;nav&gt;</code></td>
@@ -218,7 +207,7 @@
                     <p>Defining custom properties, such as fonts, gaps, and colors at the top the CSS file in <code>&colon;&colon;root</code> can increase a developer&apos;s efficiency immensely.</p>
                     <ul>
                         <li class="list-item">
-                            Using 2-3 different font families create lisible pages. A key feature in combining a serif and a sans&ndash;font tweaking the contrast &lpar;lankiness and plumpness&rpar; between them. Two font families from different types look well together when they are not too similar or too divergent.
+                            Using 2-3 different font families create lisible pages. A key feature in combining a serif and a sans&hyphen;font tweaking the contrast &lpar;lankiness and plumpness&rpar; between them. Two font families from different types look well together when they are not too similar or too divergent.
                             <pre class="code-snippet">
 <code><span class="cd-tag">:root</span> {
     <span class="cd-comment">/* Fonts */</span>
@@ -275,7 +264,7 @@
 
 
                         <li class="list-item">
-                            The default <code>line&ndash;height</code> is 1.4, which can make a page difficult to read where the content gets a little crowded. Setting the line-height to 1.5-1.7 increase lisiblity of long documents.
+                            The default <code>line&hyphen;height</code> is 1.4, which can make a page difficult to read where the content gets a little crowded. Setting the line-height to 1.5-1.7 increase lisiblity of long documents.
                             <pre class="code-snippet">
 <code><span class="cd-tag">body</span> { 
     <span class="cd-prop">line-height</span>: <span class="cd-number">1.6</span>;
@@ -477,27 +466,35 @@
             </ul>
         </section>
 
-        <!--
+       
         <section class="main-section">
             <header id="Pseudo_Classes_&_Elements"><h2>Pseudo Classes & Elements</h2></header>
             <ul class="section-contents">
-                <li><h3>Main purpose &amp; difference</h3></li>
-                <li><h3>Pseudo classes</h3></li>
-                <li><h3>Pseudo elements</h3></li>
-            </ul>
-        </section>
-        
+                <li id="ps-classes">
+                    <h3>Pseudo&hyphen;classes</h3>
+                    <p>Pseudo&hyphen;classes define differents states of the element they are applied on. These states provide feedback to users when interacting with the webpage.</p>
+                    <p>Almost every webpage has at least one link and button, not styling them with pseudo&hyphen;classes aggravate the overall user experince.</p>
+                    <ul>
+                        <p class="attn">The order of pseudo&hyphen;classes is important&colon;</p>
+                        <li class="list-item"><code>a</code> &mdash; General styling</li>
+                        <li class="list-item"><code>a:link</code> &mdash; Unvisited link</li>
+                        <li class="list-item"><code>a:visited</code> &mdash; Visited link</li>
+                        <li class="list-item"><code>a:hover</code> &mdash; When the primary pointing device is on the link</li>
+                        <li class="list-item"><code>a:active</code> &mdash; When the link is being clicked</li>
+                        <li class="list-item"><code>a:focus</code> &mdash; When the link is selected either by clicks or tabs &lpar;When a user navigates with the TAB key&rpar;. It comes last for accessibility reasons, it has the most importance.</li>
+                    </ul>
+                </li>
 
-        <section class="main-section">
-            <header id="Interactive_Webpages"><h2>Interactive Webpages</h2></header>
-            <ul class="section-contents">
-                <li><h3>Link states</h3></li>
-                <li><h3>Button states</h3></li>
-                <li><h3>Giving feedback</h3></li>
-                <li><h3>Validation</h3></li>
+                <li id="ps-elements">
+                    <h3>Pseudo&hyphen;elements</h3>
+                    <p>Pseudo&hyphen;elements allow CSS to add new elements to the HTML. The main difference between a regular HTML element and a pseudo&hyphen;element is their presence in the DOM. Pseudo&hyphen;elements are not part of the DOM, &lpar;even if they look like it when you inspect the page&rpar;, therefore is not accessible by the DOM, and cannnot be altered with JavaScript.</p>
+                    <p>They are useful in adding decorational elements, such as section dividers and bullet points.</p>
+                </li>
+
+                <p>If an HTML element has both pseudo&hyphen;classes and pseudo&hyphen;elements, the pseudo&hyphen;elements inherit those states.</p>
+
             </ul>
         </section>
--->
     </main>
 
     <footer>
