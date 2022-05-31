@@ -295,9 +295,8 @@ thead, tr {
 }
 
 td {
-    padding: 0.5em 1em;
+    padding-right: 0.2em;
 }
-
 
 /*! NAV BAR */       
 #navbar {
@@ -533,6 +532,10 @@ body::-webkit-scrollbar-thumb {
     #main-doc {
         border-bottom: none;
         border-top: none;
+    }
+
+    td {
+        padding: 0.5em 1em;
     }
 
     .table-prop-exp {
