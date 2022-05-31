@@ -511,6 +511,7 @@ body::-webkit-scrollbar-thumb {
         overflow-y: hidden;
         overflow-y: auto;
         transform: none;
+        transition: none;
     }
 
     .nav-list {
