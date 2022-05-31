@@ -6,10 +6,6 @@ const hambMid = document.querySelector("#hamburger-middle");
 const hambBtm = document.querySelector("#hamburger-bottom");
 
 
-// MAKE IT WORK ON MOBILE ONLY
-const mediaQuery = window.matchMedia("(max-width: 850px)");
-
-if (mediaQuery.matches) {
 // GETTING THE MOBILE NAV MENU WORKING
 // WHEN (hamburger is clicked)
 hamburger.addEventListener("click", () => {
@@ -43,6 +39,6 @@ hamburger.addEventListener("click", () => {
     })
 });
 
-}
+
 
 
