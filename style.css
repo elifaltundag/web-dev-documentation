@@ -294,13 +294,13 @@ td {
     width: 100%;
     padding-left: 1em;
     padding-bottom: 1em;
-    z-index: 1;
+    z-index: 500;
     border-bottom: 2px solid hsla(var(--clr-base), 0.7);
     
 }
 
 #navbar[state="open"] {
-    transform: translateY(75px);
+    transform: translateY(50px);
     transition: transform var(--dur5) ease;
 }
 
@@ -314,8 +314,6 @@ td {
     background-color: hsl(var(--clr-gray-dark));
     z-index: 500;
     padding: 1ch 2ch;
-
-    border-bottom: 2px solid hsla(var(--clr-base), 0.7);
 
     display: flex;
     align-items: center;
@@ -354,7 +352,7 @@ td {
 
     transition: 
         transform var(--dur5) ease,
-        opacity var(--dur2) ease;
+        opacity var(--dur2) ease-out;
 }
 
 
