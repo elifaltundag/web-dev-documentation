@@ -81,7 +81,7 @@
     <main id="main-doc">
         <section>
             <h1><a href="#">Web Development Documentation</a></h1>
-            <p>A brief guide to responsiveness, accessibility and interactivity in web design and development with HTML, CSS &amp; JS</p>
+            <p>A brief guide to responsiveness, accessibility and interactivity in web design and development with HTML &amp; CSS</p>
         </section>
                 
         <section id="Semantic_HTML" class="main-section">
@@ -322,7 +322,7 @@
                 <li  id="avoid-abs-units">
                     <h3>Why to avoid&ast; absolute units</h3>
                     <p>Absolute units are great during the learning process; but when it comes down to putting the knowledge into practice, they fail us developers at resposiveness. Absolute units might cause adding more than necessary media queries in order to provide smooth transitions through all screen sizes. At first it can feel strange to work with relative units and you don&apos;t feel like you know what you&apos;re doing, but after a short adaptation period, resposiveness becomes so much easier to deal with.</p>
-                    <ul><span class="attn">&lpar; &ast; &rpar; There are a few situations in which absolute units don&apos;t interfere with your design intentions and actually improve consistency &colon;</span>
+                    <ul><span class="attn">&ast; &colon; There are a few situations in which absolute units don&apos;t interfere with your design intentions and actually improve consistency &colon;</span>
                         <li class="list-item">Media queries work best with absolute units.</li>
                         <li class="list-item">Using px for borders, outlines and some lines created with pseudo-elements makes sure that you have the same thickness &lpar;width, height, weight&rpar; no matter the size. If you prefer, you can adjust this by adding 1-2 more media queries &lpar;for mobile, tablet &amp; laptop, large screens&rpar; with different thickness values.</li>
                         <li class="list-item">Using relative units when using shadows and filters like blur can result in inconsistency.</li>
@@ -468,14 +468,18 @@
 
        
         <section class="main-section">
-            <header id="Pseudo_Classes_&_Elements"><h2>Pseudo Classes & Elements</h2></header>
+            <header id="Pseudo_Classes_&_Elements"><h2>Pseudo&ast; Classes & Elements</h2></header>
             <ul class="section-contents">
+                
+                <p  class="attn">&ast; &colon; Not accessible by the DOM</p>
+                
                 <li id="ps-classes">
                     <h3>Pseudo&hyphen;classes</h3>
                     <p>Pseudo&hyphen;classes define differents states of the element they are applied on. These states provide feedback to users when interacting with the webpage.</p>
-                    <p>Almost every webpage has at least one link and button, not styling them with pseudo&hyphen;classes aggravate the overall user experince.</p>
+                    <p>The main difference between a regular class and a pseudo&hyphen;class is their presence on the DOM. Pseudo&hyphen;classes cannot be modified with JavaScript since they are not part of the DOM.</p>
+                    <p>Almost every webpage has at least one link, not styling them with pseudo&hyphen;classes aggravate the overall user experince.</p>
                     <ul>
-                        <p class="attn">The order of pseudo&hyphen;classes is important&colon;</p>
+                        <p>The order of pseudo&hyphen;classes is important&colon;</p>
                         <li class="list-item"><code>a</code> &mdash; General styling</li>
                         <li class="list-item"><code>a:link</code> &mdash; Unvisited link</li>
                         <li class="list-item"><code>a:visited</code> &mdash; Visited link</li>
@@ -487,7 +491,8 @@
 
                 <li id="ps-elements">
                     <h3>Pseudo&hyphen;elements</h3>
-                    <p>Pseudo&hyphen;elements allow CSS to add new elements to the HTML. The main difference between a regular HTML element and a pseudo&hyphen;element is their presence in the DOM. Pseudo&hyphen;elements are not part of the DOM, &lpar;even if they look like it when you inspect the page&rpar;, therefore is not accessible by the DOM, and cannnot be altered with JavaScript.</p>
+                    <p>Pseudo&hyphen;elements allow CSS to add new elements to the HTML.</p>
+                    <p>The main difference between a regular HTML element and a pseudo&hyphen;element is their accessibility the DOM. Pseudo&hyphen;elements are not part of the DOM, &lpar;even if they look like it when you inspect the page&rpar;, therefore is not accessible by the DOM, and cannnot be altered with JavaScript.</p>
                     <p>They are useful in adding decorational elements, such as section dividers and bullet points.</p>
                 </li>
 

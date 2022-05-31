@@ -16,8 +16,9 @@
     /* purple: 292, 75%, 50%; */
     /* orange: 22, 75%, 50%; */
     /* pink: 343, 75%, 60%; */
-    --clr-base: 140, 60%, 45%;      
-    --clr-base-dark: 140, 55%, 20%;
+    --clr-base: 140, 60%, 45%;
+    --clr-base-dark: 140, 52%, 35%;      
+    --clr-base-darkest: 140, 55%, 20%;
     --clr-base-light: 140, 80%, 65%; 
     
     --clr-accent: 50, 60%, 58%;
@@ -67,7 +68,6 @@ body {
 /** Reset links */
 a {
     text-decoration: none;
-    color: hsl(var(--clr-base));
 }
 
 /** Reset list styles */
@@ -419,16 +419,21 @@ td {
 /*! -------------------- */
 /*! LINK STATES          */
 /*! -------------------- */
-a:link {
+a {
     text-decoration: none;
     color: hsl(var(--clr-base));
 }
 
-/* a:visited {
+a:link {
+    color: hsl(var(--clr-base));
+}
+
+a:visited {
     color: hsl(var(--clr-base-dark));
-} */
+}
 
 a:hover {
+    color: hsl(var(--clr-base));
     border-bottom: 1px solid hsl(var(--clr-base));
     filter: brightness(130%) saturate(150%);
 }
@@ -436,6 +441,12 @@ a:hover {
 a:active {
     color: hsl(var(--clr-base-light));
     border-bottom: 1px solid hsl(var(--clr-base-light));
+}
+
+a:focus {
+    color: hsl(var(--clr-base));
+    border-bottom: 1px solid hsl(var(--clr-base));
+    filter: brightness(130%) saturate(150%);
 }
 
 
@@ -447,13 +458,13 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     border-radius: 100px;
-    background-color: hsl(var(--clr-base-dark));
+    background-color: hsl(var(--clr-base-darkest));
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: hsla(var(--clr-base), 0.7);
     border-radius: 100px;
-    border: 3px solid hsl(var(--clr-base-dark));
+    border: 3px solid hsl(var(--clr-base-darkest));
 }
 
 ::-webkit-scrollbar {
@@ -463,13 +474,13 @@ body::-webkit-scrollbar-thumb {
 
 ::-webkit-scrollbar-track {
     border-radius: 100px;
-    background-color: hsl(var(--clr-base-dark));
+    background-color: hsl(var(--clr-base-darkest));
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: hsla(var(--clr-base), 0.7);
     border-radius: 100px;
-    border: 3px solid hsl(var(--clr-base-dark));
+    border: 3px solid hsl(var(--clr-base-darkest));
 }
 
 
