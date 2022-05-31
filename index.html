@@ -364,7 +364,7 @@
                                 <td>1vw &equals; 1&percnt; of the viewport width, 1vh &equals; 1&percnt; of the viewport height. They enable fonts to shrink and expand based on the width or height of the device screen.</td>
                             </tr>
                             <tr>
-                                <td rowspan="2"><code class="cd-prop">margin, padding</code></td>
+                                <td rowspan="2"><code class="cd-prop">margin<br>padding</code></td>
                                 <td><code>em ch</code></td>
                                 <td>When creating interactive elements such as buttons, using em and ch units can help the size and whitespace adjust to the text content contained, which creates consistency through all elements of the same type.</td>
                             </tr>
@@ -373,7 +373,7 @@
                                 <td>If whitespace is arranged with margins and paddings, em units can cause them to be too small or too big. Using rem will make sure to always refer back to the root element&apos;s font size &lpar;usually <code>&lt;html&gt;&rpar;.</code></td>
                             </tr>
                             <tr>
-                                <td rowspan="3"><code class="cd-prop">width, height</code>
+                                <td rowspan="3"><code class="cd-prop">width<br>height</code>
                                 <span class="table-prop-exp">Setting direct width and especially height is usually dangerous unless you&apos;re definitely sure you know what you&apos;re doing. Try using <code>min-height</code> instead of <code>height</code> whenever possible. Combine <code>width</code> with <code>min()</code> and <code>max()</code> functions.</span></td>
                                 <td><code>ch</code></td>
                                 <td>When setting up the width of text elements the ch unit is a life-saver. By adjusting the font-size with rems and vws and setting the width with ch, you ensure there is no text overflow in the x-direction. This can be especially helpful when building tables and forms.</td>
