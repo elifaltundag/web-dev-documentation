@@ -7,7 +7,7 @@ const hambBtm = document.querySelector("#hamburger-bottom");
 
 
 // MAKE IT WORK ON MOBILE ONLY
-const mediaQuery = window.matchMedia("(min-width: 850px)");
+const mediaQuery = window.matchMedia("(max-width: 850px)");
 
 if (mediaQuery.matches) {
 // GETTING THE MOBILE NAV MENU WORKING
