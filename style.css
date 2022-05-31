@@ -137,8 +137,7 @@ html {
 }
 
 .code-snippet {
-    margin-top: 0.7em;
-    margin-bottom: 1.5em;
+    margin: 0.7em auto 1.5em;
     max-width: max-content;
     overflow-wrap: break-word;
     white-space: pre-wrap;
