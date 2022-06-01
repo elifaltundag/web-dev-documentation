@@ -260,6 +260,7 @@ body {
 
 #navbar {
     grid-area: navbar;
+    overflow-y: auto;
 }
 
 main {
@@ -307,11 +308,11 @@ td {
     background-color: hsl(var(--clr-gray-dark));
     transform: translateY(-120%);
     width: 100%;
-    padding-left: 1em;
+    padding-right: 1em;
     padding-bottom: 1em;
     z-index: 500;
     border-bottom: 2px solid hsla(var(--clr-base), 0.7);
-    
+    text-align: right;
 }
 
 #navbar[state="open"] {
@@ -511,7 +512,6 @@ body::-webkit-scrollbar-thumb {
         left: 0;
         bottom: 0;
         padding: 2em 1.5em;
-        overflow-y: hidden;
         overflow-y: auto;
         transform: none;
         transition: none;
