@@ -101,12 +101,17 @@ html {
 
 /*! TYPOGRAPHY           */
 h1 {
-    margin-top: 1.5em;
+    padding-top: 1.5em;
 } 
 
-h2, h3, h4 {
-    margin-top: 1em;
+h2 {
+    padding-top: 3em;
 }
+
+h3, h4 {
+    padding-top: 1em;
+}
+
 
 h1, h2 {
     font-family: var(--ff-serif);
@@ -169,6 +174,12 @@ thead {
     white-space: nowrap;
     border: 0;
 } 
+
+.main-section {
+    border-top: 1px solid hsla(var(--clr-base), 0.7);
+    padding-top: 1em;
+    margin-top: 1em;
+}
 
 .nav-list {
     margin-top: 0;
@@ -271,7 +282,9 @@ footer {
     grid-area: footer;
     display: flex;
     flex-direction: column;
-    padding: 5em 0 3em;
+    margin-top: 4em;
+    padding: 4em 0;
+    border-top: 1px solid hsla(var(--clr-base), 0.7);
 }
 
 
@@ -515,6 +528,7 @@ body::-webkit-scrollbar-thumb {
         overflow-y: auto;
         transform: none;
         transition: none;
+        text-align: left;
     }
 
     .nav-list {
@@ -527,6 +541,14 @@ body::-webkit-scrollbar-thumb {
 
     footer {
         grid-area: footer;
+    }
+
+    h1 {
+        padding-top: 1.5em;
+    } 
+    
+    h2, h3, h4 {
+        padding-top: 1em;
     }
 
     #main-doc {
