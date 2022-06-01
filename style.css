@@ -515,7 +515,7 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 
-    #navbar, #navbar[state="open"], #navbar[state="closed"] {
+    #navbar, #navbar[state="open"], #navbar[state="closed"], #navbar[state="none"] {
         width: min(40ch, 30vw);
         grid-area: navbar;
         border-right: 1px solid hsla(var(--clr-base), 0.3);
