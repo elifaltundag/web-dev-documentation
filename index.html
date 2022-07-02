@@ -75,6 +75,15 @@
                     <li><a href="#ps-elements">Pseudo elements</a></li>
                 </ul>
             </li>
+
+            <li>
+                <a href="#Custom_States" class="nav-link">Custom States</a>
+                <ul class="nav-list">
+                    <li><a href="#setting-data-attributes">Setting data attributes</a></li>
+                    <li><a href="#defining-states">Defining states</a></li>
+                    <li><a href="#changing-states">Changing states</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -83,6 +92,10 @@
             <h1><a href="#">Web Development Documentation</a></h1>
             <p>A brief guide to responsiveness, accessibility and interactivity in web design and development with HTML &amp; CSS</p>
         </section>
+
+
+
+
                 
         <section id="Semantic_HTML" class="main-section">
             <header><h2>Semantic HTML</h2></header>
@@ -540,12 +553,60 @@
 }</code></pre>
                     <p>If an HTML element has both pseudo&hyphen;classes and pseudo&hyphen;elements, the pseudo&hyphen;elements inherit those states.</p>
                 </li>
-
-                
-                
-
             </ul>
         </section>
+
+        <section id="Custom_States" class="main-section">
+            <header><h2>Custom States</h2></header>
+            <ul class="section-contents">
+                <li id="setting-data-attributes">
+                    <h3>Setting Data Attributes</h3>
+                    <p>A common way to style HTML elements based on user interactivity is to define different states in CSS and interchange among these states through the DOM. To access the same element(s) in the stylesheet and in the DOM, we can set custom data attributes on HTML elements:</p>
+
+                    <pre class="code-snippet">
+<code>&lt;<span class="cd-tag">div</span> <span class="cd-prop">class</span>=<span class="cd-prop">"box"</span> <span class="cd-prop">data-color</span><span>=</span><span class="cd-prop">"red"</span>&gt;&lt;/<span class="cd-tag">div</span>&gt;
+</code></pre>
+                    <p>Although it is not mandatory, starting with the prefix <code>data-</code> comes in handy when manipulating the DOM; hence it is common practice to use this syntax.</p>
+                </li>
+
+                <li id="defining-states">
+                    <h3>Defining States</h3>
+                    <p>We can give any number of values to the custom data attribute. By using attribute selectors in CSS, we can style each one differently.</p>
+<pre class="code-snippet">
+<code><span class="cd-prop">.box</span>[<span class="cd-prop">data-color</span><span class="cd-number">=</span><span class="cd-prop">"blue"</span>] {
+    <span class="cd-prop">background-color</span>: <span class="cd-prop">blue</span>;     
+}
+
+<span class="cd-prop">.box</span>[<span class="cd-prop">data-color</span><span class="cd-number">=</span><span class="cd-prop">"red"</span>] {
+    <span class="cd-prop">background-color</span>: <span class="cd-prop">red</span>;     
+}
+</code></pre>
+
+                    <p>If different properties are manipulated, developers should keep in mind the principle of cascading and reset modified properties.</p>
+                </li>
+
+                <li id="changing-states">
+                    <h3>Changing States</h3>
+                    <p>We can give any number of values to the custom data attribute. By using attribute selectors in CSS, we can style each one differently.</p>
+<pre class="code-snippet">
+<code><span class="cd-important">const</span> <span class="cd-prop">box</span> <span class="cd-important">=</span> <span class="cd-prop">document</span>.<span class="cd-slctr">querySelector</span>(<span class="cd-prop">".box"</span>);
+
+<span class="cd-prop">box</span>.<span class="cd-slctr">addEventListener</span>(<span class="cd-prop">"click"</span>, () <span class="cd-important">=&gt;</span> {
+    <span class="cd-important">const</span> <span class="cd-prop">boxColor</span> <span class="cd-important">=</span> <span class="cd-prop">box</span>.dataset.color;
+
+    <span class="cd-important">if</span> (<span class="cd-prop">boxColor</span> <span class="cd-important">===</span> <span class="cd-prop">"blue"</span>) {
+        <span class="cd-prop">box</span>.dataset.color <span class="cd-important">=</span> <span class="cd-prop">"red"</span>;
+    } <span class="cd-important">else if</span> (<span class="cd-prop">boxColor</span> <span class="cd-important">===</span> <span class="cd-prop">"red"</span>) {
+        <span class="cd-prop">box</span>.dataset.color <span class="cd-important">=</span> <span class="cd-prop">"blue"</span>;
+    }
+});    
+</code></pre>
+                    <p>The <code>data-</code> prefix allows us to use <code>.dataset.attr-name</code> to update the DOM element. If the <code>data-</code> prefix is not used, the attribute can still be accessed with <code>.getAttribute("attr-name")</code> (which has the value "attr-state") and updated with <code>.setAttribute("attr-name", "new-attr-state")</code>.</p>
+                    <p>If different properties are manipulated, developers should keep in mind the principle of cascading and reset modified properties.</p>
+                </li>
+            </ul>
+        </section>
+        
     </main>
 
 

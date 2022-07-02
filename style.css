@@ -31,6 +31,7 @@
     --cd-yellow: hsl(60, 55%, 45%);
     --cd-orange: hsl(25, 55%, 55%);
     --cd-gray: hsl(0, 0%, 65%);
+    --cd-purple: hsl(280, 40%, 58%);
 
     /** Navbar transition durations */
     --dur1: 100ms;
@@ -222,6 +223,7 @@ thead {
 .cd-tag { color: var(--cd-green);}
 .cd-tag-title { color: hsl(var(--clr-base)); }
 .cd-number { color: var(--cd-red);}
+.cd-slctr {color: var(--cd-purple);}
 
 .table-prop-exp {
     display: block;
@@ -340,7 +342,6 @@ td {
 
 
 #mobile-nav-menu {
-    display: block;
     position: fixed;
     left: 0;
     right: 0;
@@ -402,24 +403,19 @@ td {
     transform: translateX(100%);
 }
 
-
 #hamburger-top[state="hamburger"] {
     transform-origin: top right;
     transform: rotate(0);
 }
 
-
+#hamburger-top[state="cross"] {
+    transform-origin: top right;
+    transform: rotate(-40deg);
+}
 
 #hamburger-bottom[state="hamburger"] {
     transform-origin: bottom right;
     transform: rotate(0);
-}
-
-
-
-#hamburger-top[state="cross"] {
-    transform-origin: top right;
-    transform: rotate(-40deg);
 }
 
 #hamburger-bottom[state="cross"] {
