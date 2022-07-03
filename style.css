@@ -328,6 +328,8 @@ td {
     z-index: 500;
     border-bottom: 2px solid hsla(var(--clr-base), 0.7);
     text-align: right;
+
+    overflow-y: scroll;
 }
 
 #navbar[state="open"] {
@@ -365,7 +367,7 @@ td {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 6px;
+    row-gap: 7px;
     z-index: 500;
 }
 
@@ -410,7 +412,7 @@ td {
 
 #hamburger-top[state="cross"] {
     transform-origin: top right;
-    transform: rotate(-40deg);
+    transform: rotate(-45deg);
 }
 
 #hamburger-bottom[state="hamburger"] {
@@ -420,7 +422,7 @@ td {
 
 #hamburger-bottom[state="cross"] {
     transform-origin: bottom right;
-    transform: rotate(40deg);
+    transform: rotate(45deg);
 }
 
 

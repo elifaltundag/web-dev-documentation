@@ -1,4 +1,5 @@
 // VARIABLES
+const body = document.body;
 const hamburger = document.querySelector("#btn-hamburger");
 const navBar = document.querySelector("#navbar");
 const hambTop = document.querySelector("#hamburger-top");
@@ -6,8 +7,18 @@ const hambMid = document.querySelector("#hamburger-middle");
 const hambBtm = document.querySelector("#hamburger-bottom");
 
 
+body.addEventListener("click", () => {
+    const navBarOpen = navBar.getAttribute("state");
+
+    console.log(navBarOpen);
+
+    /* if (navBarOpen === "open") {
+        navBar.setAttribute("state", "closed");
+    } */
+})
+
 // GETTING THE MOBILE NAV MENU WORKING
-// WHEN (hamburger is clicked)
+// WHEN (hamburger is click ed)
 hamburger.addEventListener("click", () => {
     // Check navBar visibility
     const navBarOpen = navBar.getAttribute("state");
@@ -40,5 +51,13 @@ hamburger.addEventListener("click", () => {
 });
 
 
+
+if (navBar.getAttribute("state") === "open") {
+    
+    body.addEventListener("click", () => {
+        console.log("it should be working")
+        navBar.setAttribute("state", "closed");
+    })
+}
 
 
