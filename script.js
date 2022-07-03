@@ -52,12 +52,12 @@ hamburger.addEventListener("click", () => {
 
 
 
-if (navBar.getAttribute("state") === "open") {
-    
-    body.addEventListener("click", () => {
-        console.log("it should be working")
+document.addEventListener("click", (e) => {
+    const navBarIds = ["mobile-nav-menu", "btn-hamburger", "hamburger-top", "hamburger-middle", "hamburger-bottom", "navbar", "navigation"];
+
+    if (navBarIds.every(idName => e.target.id !== idName)) {
         navBar.setAttribute("state", "closed");
-    })
-}
+    }
+})
 
 
