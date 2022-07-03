@@ -476,6 +476,10 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid hsl(var(--clr-base-darkest));
 }
 
+body::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(var(--clr-base), 1);
+}
+
 ::-webkit-scrollbar {
     width: 15px;
     border-radius: 100px;
@@ -490,6 +494,10 @@ body::-webkit-scrollbar-thumb {
     background-color: hsla(var(--clr-base), 0.7);
     border-radius: 100px;
     border: 3px solid hsl(var(--clr-base-darkest));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(var(--clr-base), 1);
 }
 
 
