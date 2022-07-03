@@ -323,8 +323,7 @@ td {
     background-color: hsl(var(--clr-gray-dark));
     transform: translateY(-120%);
     width: 100%;
-    padding-right: 1em;
-    padding-bottom: 1em;
+    padding: 1em 1em 1em 0;
     z-index: 500;
     border-bottom: 2px solid hsla(var(--clr-base), 0.7);
     text-align: right;
@@ -333,7 +332,7 @@ td {
 }
 
 #navbar[state="open"] {
-    transform: translateY(80px);
+    transform: translateY(20%);
     transition: transform var(--dur5) ease;
 }
 
