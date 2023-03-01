@@ -1,53 +1,23 @@
 // VARIABLES
 const body = document.body;
-const hamburger = document.querySelector("#btn-hamburger");
+const hamburgerBtn = document.querySelector("#btn-hamburger");
 const navBar = document.querySelector("#navbar");
 const hambTop = document.querySelector("#hamburger-top");
 const hambMid = document.querySelector("#hamburger-middle");
 const hambBtm = document.querySelector("#hamburger-bottom");
+const hambBars = [hambTop, hambMid, hambBtm];
 
 
-body.addEventListener("click", () => {
-    const navBarOpen = navBar.getAttribute("state");
+hamburgerBtn.addEventListener("click", (e) => {  
+    const navBarState = navBar.getAttribute("state");
 
-    console.log(navBarOpen);
+    if (navBarState === "closed") {
+        openNavBar(e, navBar, hambBars)
+    } 
 
-    /* if (navBarOpen === "open") {
-        navBar.setAttribute("state", "closed");
-    } */
-})
-
-// GETTING THE MOBILE NAV MENU WORKING
-// WHEN (hamburger is click ed)
-hamburger.addEventListener("click", () => {
-    // Check navBar visibility
-    const navBarOpen = navBar.getAttribute("state");
-
-    // Change the state
-    // If the navbar is closed, open it
-    if (navBarOpen === "closed" || navBarOpen === "none") {
-        navBar.setAttribute("state", "open");
-    
-    // If the navbar is open, close it
-    } else if (navBarOpen === "open") {
-        navBar.setAttribute("state", "closed");
+    else if (navBarState === "open") {
+        closeNavBar(e, navBar, hambBars)
     }
-
-    // Change the toggle button
-    const hambButtons = [hambTop, hambMid, hambBtm];
-    hambButtons.forEach(button => {
-        // Get the states of the hamburger button
-        let btnState = button.getAttribute("state");
-
-        // If it is hamburger, change it to cross
-        if (btnState === "hamburger") {
-            button.setAttribute("state", "cross");
-        
-        // If it is cross, change it to hamburger
-        } else if (btnState === "cross") {
-            button.setAttribute("state", "hamburger");
-        }
-    })
 });
 
 
@@ -55,9 +25,27 @@ hamburger.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
     const navBarIds = ["mobile-nav-menu", "btn-hamburger", "hamburger-top", "hamburger-middle", "hamburger-bottom", "navbar", "navigation"];
 
+    console.log(e.target)
+
     if (navBarIds.every(idName => e.target.id !== idName)) {
-        navBar.setAttribute("state", "closed");
+        closeNavBar(e, navBar, hambBars)
     }
 })
 
 
+
+function openNavBar(e, navBar, hambBars) {
+    e.target.setAttribute("aria-expanded", "true")
+    navBar.setAttribute("state", "open")
+    hambBars.forEach(bar => {
+        bar.setAttribute("state", "cross")
+    })
+}
+
+function closeNavBar(e, navBar, hambBars) {
+    e.target.setAttribute("aria-expanded", "false")
+    navBar.setAttribute("state", "closed")
+    hambBars.forEach(bar => {
+        bar.setAttribute("state", "hamburger")
+    })
+}
